@@ -1,0 +1,24 @@
+.button {
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 120px;
+  padding: 18.5px 38px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  font-family: 'YS Text'; /* or 23px */
+  transition: background .15s, color .15ms;
+  cursor: pointer;
+  width: max-content;
+
+  font-style: normal;
+
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background: #FCD559;
+    color: black;
+  }
+}

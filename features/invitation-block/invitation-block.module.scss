@@ -1,0 +1,32 @@
+.invitationBlock {
+  display: grid;
+  grid-template-columns: max-content min-content;
+  justify-content: space-between;
+  padding: 80px 0;
+}
+
+.message {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.imageWrapper {
+  height: 540px;
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  right: 0;
+}
+
+.title {
+  width: 692px;
+}
+
+.text {
+  width: 488px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
