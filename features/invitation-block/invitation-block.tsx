@@ -8,10 +8,10 @@ export const InvitationBlock: FC = () => {
   return (
     <div className={styles.invitationBlock}>
       <div className={styles.message}>
-        <Typography.Title className={styles.title}>
+        <Typography.Header level={1} className={styles.title}>
           Станьте наставником или ревьюером
-        </Typography.Title>
-        <Typography.Text className={styles.text}>
+        </Typography.Header>
+        <Typography.Text className={styles.text} size={"s"}>
           Делитесь своим опытом в программировании, анализе данных, менеджменте,
           маркетинге или дизайне и&nbsp;получайте дополнительный доход
         </Typography.Text>

@@ -1,3 +1,5 @@
+@import "styles/colors";
+
 .title {
   display: grid;
   grid-auto-flow: column;
@@ -24,7 +26,17 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 130%;
-      /* or 23px */
+
+      &:hover {
+        position: relative;
+
+        &:after {
+          content: '';
+          width: 100%;
+          height: 3px;
+          background: $yellow;
+        }
+      }
     }
   }
 }

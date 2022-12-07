@@ -1,3 +1,5 @@
+@import "styles/colors";
+
 .invitationBlock {
   display: grid;
   grid-template-columns: max-content min-content;
@@ -29,4 +31,5 @@
   width: 488px;
   margin-top: 40px;
   margin-bottom: 80px;
+  color: $grey;
 }
