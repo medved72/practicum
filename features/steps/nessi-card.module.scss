@@ -1,0 +1,43 @@
+@import "styles/colors";
+
+.nessiCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 48px;
+  padding: 32px 0;
+
+  &__header {
+    width: 884px;
+  }
+
+  &__nessiLeft, &__nessiRight {
+    svg {
+      transition: fill .1s;
+    }
+  }
+
+  &__nessiLeft {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  &__nessiRight {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(-1);
+  }
+
+  &:hover {
+    .nessiCard__nessiLeft, .nessiCard__nessiRight {
+      svg {
+        fill: $yellow;
+      }
+    }
+  }
+}
