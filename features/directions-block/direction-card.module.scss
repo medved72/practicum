@@ -1,0 +1,53 @@
+@import "styles/colors";
+
+.directionCard {
+  height: 294px;
+  padding: 32px 40px;
+
+
+  &__front, &__back {
+    flex-direction: column;
+  }
+
+  &__front {
+    height: 100%;
+    display: flex;
+  }
+
+  &__back {
+    height: 100%;
+    display: none;
+  }
+
+  &__header {
+    padding: 12px 0;
+  }
+
+  &__imageWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  &__shortDescription {
+    flex: 1;
+    color: $grey;
+  }
+
+  &__goToFullDescription {
+    align-self: center;
+  }
+}
+
+.directionCard.withImage {
+  &:hover {
+    .directionCard__front {
+      display: none;
+    }
+
+    .directionCard__back {
+      display: flex;
+    }
+  }
+}

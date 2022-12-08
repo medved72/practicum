@@ -5,6 +5,7 @@ import YodaPng from "@shared/assets/yoda.png";
 import styles from "./responsibilities-block.module.scss";
 import Image from "next/image";
 import { Card } from "@shared/components/card";
+import { cn } from "@shared/utils/className";
 
 export const ResponsibilitiesBlock: FC = () => {
   return (
@@ -22,7 +23,10 @@ export const ResponsibilitiesBlock: FC = () => {
               Менять жизнь людей к&nbsp;лучшему
             </Card.Header>
             <Typography.Text
-              className={`${styles.changePeoplesLifeCard__text} ${styles.cardText}`}
+              className={cn([
+                styles.changePeoplesLifeCard__text,
+                styles.cardText,
+              ])}
               size="s"
             >
               Тысячи наших студентов нуждаются в&nbsp;ваших знаниях и опыте — не
@@ -43,7 +47,7 @@ export const ResponsibilitiesBlock: FC = () => {
               Получать доход в&nbsp;среднем 30–55&nbsp;тысяч рублей в месяц
             </Card.Header>
             <Typography.Text
-              className={`${styles.incomeCard__text} ${styles.cardText}`}
+              className={cn([styles.incomeCard__text, styles.cardText])}
               size="s"
             >
               Работая удалённо 2–3 часа в день, график выбираете сами
@@ -54,7 +58,7 @@ export const ResponsibilitiesBlock: FC = () => {
           </Card>
         </Grid.Item>
         <Grid.Item>
-          <Card color="blue">
+          <Card color="blue" className={styles.responsibilitiesBlock__card}>
             <Card.Header size="l">Общаться в&nbsp;EdTech</Card.Header>
             <Typography.Text className={styles.cardText} size="s">
               Станете частью сообщества экспертов и&nbsp;посмотрите на мир
@@ -63,7 +67,7 @@ export const ResponsibilitiesBlock: FC = () => {
           </Card>
         </Grid.Item>
         <Grid.Item>
-          <Card color="blue">
+          <Card color="blue" className={styles.responsibilitiesBlock__card}>
             <Card.Header size="l">Учиться новому</Card.Header>
             <Typography.Text className={styles.cardText} size="s">
               Узнаете, как давать обратную связь, выступать на публике
@@ -72,7 +76,7 @@ export const ResponsibilitiesBlock: FC = () => {
           </Card>
         </Grid.Item>
         <Grid.Item>
-          <Card color="blue">
+          <Card color="blue" className={styles.responsibilitiesBlock__card}>
             <Card.Header size="l">Развивать личный бренд</Card.Header>
             <Typography.Text className={styles.cardText} size="s">
               Публикуйте статьи в&nbsp;блоге Практикума и&nbsp;выступайте
@@ -82,7 +86,7 @@ export const ResponsibilitiesBlock: FC = () => {
           </Card>
         </Grid.Item>
         <Grid.Item>
-          <Card color="blue">
+          <Card color="blue" className={styles.responsibilitiesBlock__card}>
             <Card.Header size="l">Расти внутри роли</Card.Header>
             <Typography.Text className={styles.cardText} size="s">
               Вы сможете стать старшим наставником или сеньор-ревьюером

@@ -1,5 +1,6 @@
 import { FC, ReactNode } from "react";
 import styles from "./card-header.module.scss";
+import { cn } from "@shared/utils/className";
 
 export const CardHeader: FC<{
   className?: string;
@@ -8,9 +9,11 @@ export const CardHeader: FC<{
 }> = ({ className, size, children }) => {
   return (
     <div
-      className={`${className} ${styles["card-header"]} ${
-        styles[`card-header-${size}`]
-      }`}
+      className={cn([
+        className,
+        styles["card-header"],
+        styles[`card-header-${size}`],
+      ])}
     >
       {children}
     </div>

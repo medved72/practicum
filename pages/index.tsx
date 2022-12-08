@@ -3,6 +3,7 @@ import { ContentBlock } from "@shared/components";
 import { Header } from "@shared/components/header";
 import { InvitationBlock } from "@features/invitation-block";
 import { ResponsibilitiesBlock } from "@features/responsibilities-block";
+import { DirectionsBlock } from "@features/directions-block";
 
 const Page: FC = () => {
   return (
@@ -11,6 +12,7 @@ const Page: FC = () => {
         <Header />
         <InvitationBlock />
         <ResponsibilitiesBlock />
+        <DirectionsBlock />
       </ContentBlock>
     </div>
   );

@@ -1,6 +1,7 @@
 import { FC, ReactNode } from "react";
 import styles from "./card.module.scss";
 import { CardHeader } from "@shared/components/card/card-header";
+import { cn } from "@shared/utils/className";
 
 export const Card: FC<{
   className?: string;
@@ -12,7 +13,7 @@ export const Card: FC<{
   color = "white",
 }) => {
   return (
-    <div className={`${className} ${styles.card} ${styles[`card-${color}`]}`}>
+    <div className={cn([className, styles.card, styles[`card-${color}`]])}>
       {children}
     </div>
   );
