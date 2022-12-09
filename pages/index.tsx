@@ -5,6 +5,7 @@ import { InvitationBlock } from "@features/invitation-block";
 import { ResponsibilitiesBlock } from "@features/responsibilities-block";
 import { DirectionsBlock } from "@features/directions-block";
 import { Steps } from "@features/steps";
+import { Roles } from "@features/roles";
 
 const Page: FC = () => {
   return (
@@ -15,6 +16,7 @@ const Page: FC = () => {
         <ResponsibilitiesBlock />
         <DirectionsBlock />
         <Steps />
+        <Roles />
       </ContentBlock>
     </div>
   );

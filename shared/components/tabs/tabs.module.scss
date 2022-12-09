@@ -1,0 +1,39 @@
+@import "styles/colors";
+
+.tabs {
+  &__panel {
+    width: min-content;
+    display: flex;
+    gap: 4px;
+    border-radius: 12px;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  &__tabButton {
+    border: 0;
+    padding: 6px 16px;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+    transition: all .15s ease;
+
+    input {
+      width: 0;
+      height: 0;
+      position: absolute;
+    }
+
+    &:hover{
+      background: rgba(0,0,0,0.06);
+    }
+  }
+
+  &__tabButton__active {
+    background: $white;
+
+    &:hover {
+      background: white;
+    }
+  }
+}

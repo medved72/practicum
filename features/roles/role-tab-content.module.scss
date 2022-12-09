@@ -1,0 +1,11 @@
+.roleTabContent {
+  margin-top: 80px;
+
+  &__card {
+    display: grid;
+    min-height: 134px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 32px;
+  }
+}

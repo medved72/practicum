@@ -1,0 +1,14 @@
+.roles {
+  padding: 80px 0;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: min-content 1fr;
+  gap: 20px;
+
+  &__tabs {
+    display: grid;
+    gap: 40px;
+    align-self: center;
+  }
+}
