@@ -6,6 +6,7 @@ import { ResponsibilitiesBlock } from "@features/responsibilities-block";
 import { DirectionsBlock } from "@features/directions-block";
 import { Steps } from "@features/steps";
 import { Roles } from "@features/roles";
+import { VacancyBlock } from "@features/vacancy-block";
 
 const Page: FC = () => {
   return (
@@ -17,6 +18,7 @@ const Page: FC = () => {
         <DirectionsBlock />
         <Steps />
         <Roles />
+        <VacancyBlock />
       </ContentBlock>
     </div>
   );

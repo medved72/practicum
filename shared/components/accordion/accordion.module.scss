@@ -1,0 +1,53 @@
+.accordion {
+  .item {
+    .label {
+      display: flex;
+      position: relative;
+      border-bottom: 2px solid #858585;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+      height: 138px;
+
+      .crossIcon {
+        width: 82px;
+        height: 82px;
+        border-radius: 50%;
+        transition: transform .3s, background .1s;
+
+        &:hover {
+          background: #151617;
+
+          svg {
+            fill: white
+          }
+        }
+      }
+
+      input {
+        position: absolute;
+        width: 0;
+        height: 0;
+      }
+    }
+
+    .content {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+    }
+
+    &:has(label input:checked) {
+      .label {
+        .crossIcon {
+          transform: rotate(45deg);
+        }
+      }
+
+      .content {
+        max-height: 100vh;
+        transition: max-height .3s ease-in-out;
+      }
+    }
+  }
+}

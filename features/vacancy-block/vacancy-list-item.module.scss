@@ -1,0 +1,21 @@
+.vacancyListItem {
+  padding: 28px 0;
+  display: flex;
+  justify-content: space-between;
+  min-height: 138px;
+
+  &__description {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+  }
+
+  &__detailsButton {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 285px;
+  }
+}
