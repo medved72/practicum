@@ -25,7 +25,7 @@ export const DirectionsBlock: FC = () => {
         <DirectionCard
           previewImage={<FacultativeDesignImage />}
           header="Дизайн"
-          text="Графический, коммуникационный, для интерфейсов и продуктов"
+          text="Графический, коммуникационный, для интерфейсов и продуктов"
         />
         <DirectionCard
           previewImage={<FacultativeDataAnalyzingImage />}
@@ -40,7 +40,7 @@ export const DirectionsBlock: FC = () => {
         <DirectionCard
           previewImage={<FacultativeProgrammingImage />}
           header="Программирование"
-          text="Тестирование, фронтенд,  бэкенд, DevOps и алгоритмы"
+          text="Тестирование, фронтенд, бэкенд, DevOps и алгоритмы"
         />
         <DirectionCard
           header="Все курсы"
