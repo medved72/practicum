@@ -1,3 +1,4 @@
+//@import "slick-carousel/slick/slick";
 @import "colors";
 @import "fonts";
 @import "helpers";
@@ -34,3 +35,18 @@ body {
   height: 100%;
 }
 
+.slick-arrow {
+  display: none !important;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-slide > div:first-child{
+  height: 100%;
+}
