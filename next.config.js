@@ -1,9 +1,12 @@
 const isProd = process.env.NODE_ENV === "production";
 
+const assetPrefix = isProd ? "/practicum/" : "";
+const basePath = isProd ? "/practicum" : "";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  assetPrefix: isProd ? "/practicum/" : "",
-  basePath: isProd ? "/practicum" : "",
+  assetPrefix,
+  basePath,
   reactStrictMode: true,
   swcMinify: true,
   images: {
@@ -11,8 +14,7 @@ const nextConfig = {
   },
   trailingSlash: true,
   webpack(config, { isServer }) {
-    const prefix = config.assetPrefix ?? config.basePath ?? "";
-
+    console.log(isServer);
     config.module.rules.push({
       test: /\.svg$/,
       issuer: {
@@ -28,7 +30,7 @@ const nextConfig = {
         {
           loader: "file-loader",
           options: {
-            publicPath: `${prefix}/_next/static/media/`,
+            publicPath: `${basePath}/_next/static/media/`,
             outputPath: `${isServer ? "../" : ""}static/media/`,
             name: "[name].[hash].[ext]",
           },
