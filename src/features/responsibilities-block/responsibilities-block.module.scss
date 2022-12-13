@@ -13,29 +13,10 @@
   margin-bottom: 80px;
 }
 
-.cardText {
-  margin-top: 24px;
+.card {
+  padding: 34px 28px;
 }
 
-.incomeCard,
-.changePeoplesLifeCard {
-  position: relative;
-  height: 473px;
-
-  &__header {
-    width: 356px;
-  }
-
-  &__text {
-    width: 356px;
-    color: $grey;
-  }
-
-  &__image {
-    img {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-    }
-  }
+.cardText {
+  margin-top: 24px;
 }

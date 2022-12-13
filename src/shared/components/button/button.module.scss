@@ -14,7 +14,7 @@
   font-size: 18px;
   line-height: 130%;
 
-  &:hover {
+  &:not(.disabledHover):hover {
     background: #FCD559;
     color: black;
   }

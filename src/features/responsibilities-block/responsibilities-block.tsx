@@ -2,11 +2,11 @@ import { FC } from "react";
 import { Grid, Typography } from "@shared/components";
 import RobotPng from "@shared/assets/images/robot.png";
 import YodaPng from "@shared/assets/images/yoda.png";
-import Image from "next/image";
-import { Card } from "@shared/components";
-import { cn } from "@shared/utils";
+
+import { BigCard } from "./big-card";
 
 import styles from "./responsibilities-block.module.scss";
+import { SmallCard } from "@features/responsibilities-block/small-card";
 
 export const ResponsibilitiesBlock: FC = () => {
   return (
@@ -16,83 +16,46 @@ export const ResponsibilitiesBlock: FC = () => {
       </Typography.Header>
       <Grid>
         <Grid.Item span="2">
-          <Card className={styles.changePeoplesLifeCard}>
-            <Card.Header
-              className={styles.changePeoplesLifeCard__header}
-              size="l"
-            >
-              Менять жизнь людей к&nbsp;лучшему
-            </Card.Header>
-            <Typography.Text
-              className={cn([
-                styles.changePeoplesLifeCard__text,
-                styles.cardText,
-              ])}
-              size="s"
-            >
-              Тысячи наших студентов нуждаются в&nbsp;ваших знаниях и опыте — не
-              бойтесь ими&nbsp;делиться
-            </Typography.Text>
-            <div className={styles.changePeoplesLifeCard__image}>
-              <Image
-                className={styles.changePeoplesLifeCard__image}
-                src={RobotPng}
-                alt=""
-              />
-            </div>
-          </Card>
+          <BigCard
+            title="Менять жизнь людей к лучшему"
+            text="Тысячи наших студентов нуждаются в ваших знаниях и опыте — не
+        бойтесь ими делиться"
+            image={RobotPng}
+          />
         </Grid.Item>
         <Grid.Item span="2">
-          <Card className={styles.incomeCard}>
-            <Card.Header className={styles.incomeCard__header} size="l">
-              Получать доход в&nbsp;среднем 30–55&nbsp;тысяч рублей в месяц
-            </Card.Header>
-            <Typography.Text
-              className={cn([styles.incomeCard__text, styles.cardText])}
-              size="s"
-            >
-              Работая удалённо 2–3 часа в день, график выбираете сами
-            </Typography.Text>
-            <div className={styles.incomeCard__image}>
-              <Image src={YodaPng} alt="" />
-            </div>
-          </Card>
+          <BigCard
+            title={`Получать доход в среднем 30–55 тысяч рублей в месяц`}
+            text={`Работая удалённо 2–3 часа в день, график выбираете сами`}
+            image={YodaPng}
+          />
         </Grid.Item>
         <Grid.Item>
-          <Card color="blue" className={styles.responsibilitiesBlock__card}>
-            <Card.Header size="l">Общаться в&nbsp;EdTech</Card.Header>
-            <Typography.Text className={styles.cardText} size="s">
-              Станете частью сообщества экспертов и&nbsp;посмотрите на мир
-              онлайн-образования изнутри
-            </Typography.Text>
-          </Card>
+          <SmallCard
+            title="Общаться в EdTech"
+            text="Станете частью сообщества экспертов и посмотрите на мир
+              онлайн-образования изнутри"
+          />
         </Grid.Item>
         <Grid.Item>
-          <Card color="blue" className={styles.responsibilitiesBlock__card}>
-            <Card.Header size="l">Учиться новому</Card.Header>
-            <Typography.Text className={styles.cardText} size="s">
-              Узнаете, как давать обратную связь, выступать на публике
-              и&nbsp;мотивировать людей
-            </Typography.Text>
-          </Card>
+          <SmallCard
+            title="Учиться новому"
+            text="Узнаете, как давать обратную связь, выступать на публике
+              и мотивировать людей"
+          />
         </Grid.Item>
         <Grid.Item>
-          <Card color="blue" className={styles.responsibilitiesBlock__card}>
-            <Card.Header size="l">Развивать личный бренд</Card.Header>
-            <Typography.Text className={styles.cardText} size="s">
-              Публикуйте статьи в&nbsp;блоге Практикума и&nbsp;выступайте
-              на&nbsp;мероприятиях, чтобы о&nbsp;вас узнали
-              как&nbsp;об&nbsp;эксперте
-            </Typography.Text>
-          </Card>
+          <SmallCard
+            title="Развивать личный бренд"
+            text="Публикуйте статьи в блоге Практикума и выступайте на мероприятиях,
+              чтобы о вас узнали как об эксперте"
+          />
         </Grid.Item>
         <Grid.Item>
-          <Card color="blue" className={styles.responsibilitiesBlock__card}>
-            <Card.Header size="l">Расти внутри роли</Card.Header>
-            <Typography.Text className={styles.cardText} size="s">
-              Вы сможете стать старшим наставником или сеньор-ревьюером
-            </Typography.Text>
-          </Card>
+          <SmallCard
+            title="Расти внутри роли"
+            text="Вы сможете стать старшим наставником или сеньор-ревьюером"
+          />
         </Grid.Item>
       </Grid>
     </div>

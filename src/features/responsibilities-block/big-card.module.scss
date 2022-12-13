@@ -1,0 +1,24 @@
+@import "src/styles/colors";
+
+.bigCard {
+  position: relative;
+  height: 473px;
+
+  &__header {
+    width: 356px;
+  }
+
+  &__text {
+    margin-top: 24px;
+    width: 356px;
+    color: $grey;
+  }
+
+  &__image {
+    img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
