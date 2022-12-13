@@ -5,7 +5,7 @@ import { cn } from "@shared/utils/className";
 export const Text: FC<{
   className?: string;
   children?: ReactNode;
-  size?: "l" | "s" | "supportive";
+  size?: "l" | "s" | "supportive" | "supportive-s";
 }> = ({ children, className, size = "l" }) => {
   return (
     <div className={cn([className, styles.text, styles[`text-${size}`]])}>

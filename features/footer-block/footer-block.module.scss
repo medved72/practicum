@@ -1,0 +1,63 @@
+@import "styles/colors";
+
+.footerBlock {
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  gap: 211px;
+
+  .logo  {
+    width: 163px;
+    height: 28px;
+    margin-bottom: 24px;
+  }
+
+  .phone {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 130%;
+    margin-bottom: 8px;
+  }
+
+  .callFree {
+    margin-bottom: 24px;
+  }
+
+  .links {
+    display: flex;
+    //gap: 120px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .info {
+    flex-basis: 488px;
+  }
+
+  .textGrey {
+    color: $grey;
+    opacity: 0.5;
+    mix-blend-mode: normal;
+  }
+
+  .social {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .socialIcons {
+    height: 36px;
+  }
+
+  .paragraph {
+    margin-bottom: 16px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 24px;
+  }
+}

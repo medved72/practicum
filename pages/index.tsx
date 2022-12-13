@@ -9,6 +9,7 @@ import { Roles } from "@features/roles";
 import { VacancyBlock } from "@features/vacancy-block";
 import { StoriesBlock } from "@features/stories-block";
 import { FaqBlock } from "@features/faq-block";
+import { FooterBlock } from "@features/footer-block";
 
 const Page: FC = () => {
   return (
@@ -23,6 +24,7 @@ const Page: FC = () => {
         <VacancyBlock />
         <StoriesBlock />
         <FaqBlock />
+        <FooterBlock />
       </ContentBlock>
     </div>
   );
