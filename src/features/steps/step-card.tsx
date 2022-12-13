@@ -1,5 +1,5 @@
-import { Card, Typography } from "@shared/components";
 import { FC, ReactNode } from "react";
+import { Card, Typography } from "@shared/components";
 import styles from "./step-card.module.scss";
 
 export const StepCard: FC<{

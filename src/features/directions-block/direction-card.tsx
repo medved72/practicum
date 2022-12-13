@@ -1,7 +1,8 @@
 import { FC, ReactNode } from "react";
 import { Button, Card, Typography } from "@shared/components";
+import { cn } from "@shared/utils";
+
 import styles from "./direction-card.module.scss";
-import { cn } from "@shared/utils/className";
 
 export const DirectionCard: FC<{
   header: string;

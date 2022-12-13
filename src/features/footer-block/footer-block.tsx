@@ -1,10 +1,10 @@
 import { FC } from "react";
-import LogoImage from "@shared/assets/images/logo-footer.svg";
-import VkSocialImage from "@shared/assets/images/social_web_vk.svg";
-import TelegramSocialImage from "@shared/assets/images/social_web_telegram.svg";
+import LogoImage from "../../shared/assets/images/logo-footer.svg";
+import VkSocialImage from "../../shared/assets/images/social_web_vk.svg";
+import TelegramSocialImage from "../../shared/assets/images/social_web_telegram.svg";
 import styles from "./footer-block.module.scss";
 import { Typography } from "@shared/components";
-import { cn } from "@shared/utils/className";
+import { cn } from "@shared/utils";
 
 export const FooterBlock: FC = () => {
   return (
@@ -71,32 +71,36 @@ export const FooterBlock: FC = () => {
           <ul>
             <li>
               <Typography.Text size="s">
-                <a href="#">Правовая информация</a>
+                <a href="src/features/footer-block/footer-block#">
+                  Правовая информация
+                </a>
               </Typography.Text>
             </li>
             <li>
               <Typography.Text size="s">
-                <a href="#">Корпоративным клиентам</a>
+                <a href="src/features/footer-block/footer-block#">
+                  Корпоративным клиентам
+                </a>
               </Typography.Text>
             </li>
             <li>
               <Typography.Text size="s">
-                <a href="#">Отзывы</a>
+                <a href="src/features/footer-block/footer-block#">Отзывы</a>
               </Typography.Text>
             </li>
             <li>
               <Typography.Text size="s">
-                <a href="#">Помощь</a>
+                <a href="src/features/footer-block/footer-block#">Помощь</a>
               </Typography.Text>
             </li>
             <li>
               <Typography.Text size="s">
-                <a href="#">Лицензия</a>
+                <a href="src/features/footer-block/footer-block#">Лицензия</a>
               </Typography.Text>
             </li>
             <li>
               <Typography.Text size="s">
-                <a href="#">Для СМИ</a>
+                <a href="src/features/footer-block/footer-block#">Для СМИ</a>
               </Typography.Text>
             </li>
           </ul>
@@ -111,12 +115,14 @@ export const FooterBlock: FC = () => {
           <ul>
             <li>
               <Typography.Text size="s">
-                <a href="#">Вакансии</a>
+                <a href="src/features/footer-block/footer-block#">Вакансии</a>
               </Typography.Text>
             </li>
             <li>
               <Typography.Text size="s">
-                <a href="#">Стать наставником</a>
+                <a href="src/features/footer-block/footer-block#">
+                  Стать наставником
+                </a>
               </Typography.Text>
             </li>
           </ul>

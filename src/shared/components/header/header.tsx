@@ -9,16 +9,16 @@ export const Header: FC = () => {
       <nav className={styles.navigation}>
         <ul>
           <li>
-            <a href="#">Направления</a>
+            <a href="src/shared/components/header/header#">Направления1</a>
           </li>
           <li>
-            <a href="#">Роли</a>
+            <a href="src/shared/components/header/header#">Роли</a>
           </li>
           <li>
-            <a href="#">Предложения</a>
+            <a href="src/shared/components/header/header#">Предложения</a>
           </li>
           <li>
-            <a href="#">FAQ</a>
+            <a href="src/shared/components/header/header#">FAQ</a>
           </li>
         </ul>
       </nav>

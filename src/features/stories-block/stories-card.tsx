@@ -1,6 +1,6 @@
 import { FC, useCallback, useRef, useState } from "react";
 import { CardHeader, Typography } from "@shared/components";
-import { cn } from "@shared/utils/className";
+import { cn } from "@shared/utils";
 import IrinaVideo from "@shared/assets/video/irina-video.mp4";
 import IrinaPoster from "@shared/assets/video/irina-poster.png";
 import PlayImage from "@shared/assets/images/play.svg";

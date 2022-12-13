@@ -1,11 +1,12 @@
-import { Grid, Typography } from "@shared/components";
 import { FC } from "react";
+import { Grid, Typography } from "@shared/components";
 import RobotPng from "@shared/assets/images/robot.png";
 import YodaPng from "@shared/assets/images/yoda.png";
-import styles from "./responsibilities-block.module.scss";
 import Image from "next/image";
-import { Card } from "@shared/components/card";
-import { cn } from "@shared/utils/className";
+import { Card } from "@shared/components";
+import { cn } from "@shared/utils";
+
+import styles from "./responsibilities-block.module.scss";
 
 export const ResponsibilitiesBlock: FC = () => {
   return (

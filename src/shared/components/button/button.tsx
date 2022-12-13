@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 import styles from "./button.module.scss";
-import { cn } from "@shared/utils/className";
+import { cn } from "@shared/utils";
 
 export const Button: FC<{
   className?: string;

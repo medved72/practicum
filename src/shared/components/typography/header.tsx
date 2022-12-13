@@ -1,6 +1,7 @@
 import { FC, ReactNode } from "react";
+import { cn } from "@shared/utils";
+
 import styles from "./header.module.scss";
-import { cn } from "@shared/utils/className";
 
 export const Header: FC<{
   level: 1 | 2 | 3 | 4;

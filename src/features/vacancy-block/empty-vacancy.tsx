@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { VacancyListItem } from "@features/vacancy-block/vacancy-list-item";
+import { VacancyListItem } from "./vacancy-list-item";
 
 export const EmptyVacancy: FC = () => {
   return (

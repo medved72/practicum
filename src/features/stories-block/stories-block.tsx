@@ -6,7 +6,7 @@ import ForwardImage from "@shared/assets/images/forward.svg";
 import ArrowImage from "@shared/assets/images/roles-arrow.svg";
 
 import styles from "./stories-block.module.scss";
-import { StoriesCard } from "@features/stories-block/stories-card";
+import { StoriesCard } from "./stories-card";
 
 const settings: ComponentProps<typeof Slider> = {
   speed: 300,

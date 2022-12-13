@@ -2,9 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@pages/*": ["pages/*"],
-      "@shared/*": ["shared/*"],
-      "@features/*": ["features/*"]
+      "@pages/*": ["./src/pages/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@features/*": ["./src/features/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

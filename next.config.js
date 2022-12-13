@@ -14,7 +14,6 @@ const nextConfig = {
   },
   trailingSlash: true,
   webpack(config, { isServer }) {
-    console.log(isServer);
     config.module.rules.push({
       test: /\.svg$/,
       issuer: {

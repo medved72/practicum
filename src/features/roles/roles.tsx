@@ -4,8 +4,9 @@ import RolesPeopleMentorImage from "@shared/assets/images/roles-peoples-mentor.p
 import RolesPeopleReviewerImage from "@shared/assets/images/roles-peoples-reviewer.png";
 import RolesArrowImage from "@shared/assets/images/roles-arrow.svg";
 import { Typography } from "@shared/components";
-import { Tabs } from "@shared/components/tabs";
+import { Tabs } from "@shared/components";
 import { makeRolesTabsMap, Role } from "./utils";
+
 import styles from "./roles.module.scss";
 
 export const tabs = makeRolesTabsMap([Role.mentor, Role.reviewer]);

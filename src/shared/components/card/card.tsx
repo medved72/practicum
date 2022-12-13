@@ -1,7 +1,7 @@
 import { FC, ReactNode } from "react";
 import styles from "./card.module.scss";
-import { CardHeader } from "@shared/components/card/card-header";
-import { cn } from "@shared/utils/className";
+import { CardHeader } from "./card-header";
+import { cn } from "@shared/utils";
 
 export const Card: FC<{
   className?: string;

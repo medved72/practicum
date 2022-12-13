@@ -2,7 +2,7 @@ import React, { ChangeEvent, useCallback, useMemo } from "react";
 import { FC, ReactNode, useState } from "react";
 import { Typography } from "../typography";
 import styles from "./tabs.module.scss";
-import { cn } from "@shared/utils/className";
+import { cn } from "@shared/utils";
 
 interface Tab {
   key: string;

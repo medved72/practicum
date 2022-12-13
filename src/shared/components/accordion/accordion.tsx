@@ -1,7 +1,7 @@
 import { FC, ReactNode } from "react";
-import CrossImage from "@shared/assets/images/cross.svg";
+import CrossImage from "../../assets/images/cross.svg";
 import styles from "./accordion.module.scss";
-import { Typography } from "@shared/components";
+import { Typography } from "../index";
 
 const AccordionItem: FC<{ label: string; children: ReactNode }> = ({
   label,

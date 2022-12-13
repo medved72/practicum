@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Vacancy } from "@features/vacancy-block/data";
+import { Vacancy } from "./data";
 import { Button, CardHeader, Typography } from "@shared/components";
 
 import styles from "./vacancy-list-item.module.scss";
