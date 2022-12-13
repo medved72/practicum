@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Button, Card, Typography } from "@shared/components";
-import NessiImage from "@shared/assets/steps-nessi.svg";
+import NessiImage from "@shared/assets/images/steps-nessi.svg";
 import styles from "./nessi-card.module.scss";
 
 export const NessiCard: FC = () => {

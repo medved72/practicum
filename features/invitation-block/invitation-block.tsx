@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Button, Typography } from "@shared/components";
-import InvitationPeoplesPng from "@shared/assets/invitation-people.png";
+import InvitationPeoplesPng from "@shared/assets/images/invitation-people.png";
 import Image from "next/image";
 import styles from "./invitation-block.module.scss";
 

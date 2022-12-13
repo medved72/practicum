@@ -1,9 +1,9 @@
 import { ComponentProps, FC, useRef } from "react";
 import Slider from "react-slick";
 import { Typography } from "@shared/components";
-import BackwardImage from "@shared/assets/backward.svg";
-import ForwardImage from "@shared/assets/forward.svg";
-import ArrowImage from "@shared/assets/roles-arrow.svg";
+import BackwardImage from "@shared/assets/images/backward.svg";
+import ForwardImage from "@shared/assets/images/forward.svg";
+import ArrowImage from "@shared/assets/images/roles-arrow.svg";
 
 import styles from "./stories-block.module.scss";
 import { StoriesCard } from "@features/stories-block/stories-card";

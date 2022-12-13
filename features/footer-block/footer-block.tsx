@@ -1,7 +1,7 @@
 import { FC } from "react";
-import LogoImage from "@shared/assets/logo-footer.svg";
-import VkSocialImage from "@shared/assets/social_web_vk.svg";
-import TelegramSocialImage from "@shared/assets/social_web_telegram.svg";
+import LogoImage from "@shared/assets/images/logo-footer.svg";
+import VkSocialImage from "@shared/assets/images/social_web_vk.svg";
+import TelegramSocialImage from "@shared/assets/images/social_web_telegram.svg";
 import styles from "./footer-block.module.scss";
 import { Typography } from "@shared/components";
 import { cn } from "@shared/utils/className";

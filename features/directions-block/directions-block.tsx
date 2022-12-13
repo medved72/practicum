@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { Typography } from "@shared/components";
-import FacultativeManagementImage from "@shared/assets/facultative-management.svg";
-import FacultativeDesignImage from "@shared/assets/facultative-design.svg";
-import FacultativeDataAnalyzingImage from "@shared/assets/facultative-data-analyzing.svg";
-import FacultativeMarketingImage from "@shared/assets/facultative-marketing.svg";
-import FacultativeProgrammingImage from "@shared/assets/facultative-programming.svg";
+import FacultativeManagementImage from "@shared/assets/images/facultative-management.svg";
+import FacultativeDesignImage from "@shared/assets/images/facultative-design.svg";
+import FacultativeDataAnalyzingImage from "@shared/assets/images/facultative-data-analyzing.svg";
+import FacultativeMarketingImage from "@shared/assets/images/facultative-marketing.svg";
+import FacultativeProgrammingImage from "@shared/assets/images/facultative-programming.svg";
 
 import { DirectionCard } from "./direction-card";
 

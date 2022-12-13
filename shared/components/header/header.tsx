@@ -1,5 +1,5 @@
 import { FC } from "react";
-import LogoSvg from "@shared/assets/logo.svg";
+import LogoSvg from "@shared/assets/images/logo.svg";
 import styles from "./header.module.scss";
 
 export const Header: FC = () => {

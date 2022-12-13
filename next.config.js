@@ -1,9 +1,18 @@
+const isProd = process.env.NODE_ENV === "production";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/gh-pages-test",
+  assetPrefix: isProd ? "/practicum/" : "",
+  basePath: isProd ? "/practicum" : "",
   reactStrictMode: true,
   swcMinify: true,
-  webpack(config) {
+  images: {
+    unoptimized: true,
+  },
+  trailingSlash: true,
+  webpack(config, { isServer }) {
+    const prefix = config.assetPrefix ?? config.basePath ?? "";
+
     config.module.rules.push({
       test: /\.svg$/,
       issuer: {
@@ -11,6 +20,20 @@ const nextConfig = {
       },
 
       use: ["@svgr/webpack"],
+    });
+
+    config.module.rules.push({
+      test: /\.mp4$/,
+      use: [
+        {
+          loader: "file-loader",
+          options: {
+            publicPath: `${prefix}/_next/static/media/`,
+            outputPath: `${isServer ? "../" : ""}static/media/`,
+            name: "[name].[hash].[ext]",
+          },
+        },
+      ],
     });
 
     return config;

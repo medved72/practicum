@@ -1,5 +1,5 @@
 import { FC, ReactNode } from "react";
-import CrossImage from "@shared/assets/cross.svg";
+import CrossImage from "@shared/assets/images/cross.svg";
 import styles from "./accordion.module.scss";
 import { Typography } from "@shared/components";
 

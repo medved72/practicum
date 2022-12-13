@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
 import Image from "next/image";
-import RolesPeopleMentorImage from "@shared/assets/roles-peoples-mentor.png";
-import RolesPeopleReviewerImage from "@shared/assets/roles-peoples-reviewer.png";
-import RolesArrowImage from "@shared/assets/roles-arrow.svg";
+import RolesPeopleMentorImage from "@shared/assets/images/roles-peoples-mentor.png";
+import RolesPeopleReviewerImage from "@shared/assets/images/roles-peoples-reviewer.png";
+import RolesArrowImage from "@shared/assets/images/roles-arrow.svg";
 import { Typography } from "@shared/components";
 import { Tabs } from "@shared/components/tabs";
 import { makeRolesTabsMap, Role } from "./utils";

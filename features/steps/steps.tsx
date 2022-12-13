@@ -2,11 +2,11 @@ import { FC } from "react";
 import { StepCard } from "@features/steps/step-card";
 
 import { Grid, Typography } from "@shared/components";
-import RoleImage from "@shared/assets/steps-role.svg";
-import RequestImage from "@shared/assets/steps-request.svg";
-import LearningImage from "@shared/assets/steps-learning.svg";
-import ShareKnowledgeImage from "@shared/assets/steps-share-knowledge.svg";
-import NessiImage from "@shared/assets/steps-nessi.svg";
+import RoleImage from "@shared/assets/images/steps-role.svg";
+import RequestImage from "@shared/assets/images/steps-request.svg";
+import LearningImage from "@shared/assets/images/steps-learning.svg";
+import ShareKnowledgeImage from "@shared/assets/images/steps-share-knowledge.svg";
+import NessiImage from "@shared/assets/images/steps-nessi.svg";
 
 import styles from "./steps.module.scss";
 import { NessiCard } from "@features/steps/nessi-card";
