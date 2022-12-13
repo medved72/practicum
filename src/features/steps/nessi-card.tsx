@@ -12,7 +12,9 @@ export const NessiCard: FC = () => {
       <Typography.Header className={styles.nessiCard__header} level={3}>
         Станьте частью команды и вдохновляйте своих первых студентов
       </Typography.Header>
-      <Button disabledHover>Стать частью команды</Button>
+      <Button className={styles.nessiCard__button} disabledHover>
+        Стать частью команды
+      </Button>
       <div className={styles.nessiCard__nessiRight}>
         <NessiImage />
       </div>

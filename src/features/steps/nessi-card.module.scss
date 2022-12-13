@@ -15,6 +15,9 @@
   }
 
   &__nessiLeft, &__nessiRight {
+    height: 192px;
+    bottom: 0;
+
     svg {
       transition: fill .1s;
     }
@@ -23,14 +26,18 @@
   &__nessiLeft {
     position: absolute;
     left: 0;
-    bottom: 0;
   }
 
   &__nessiRight {
     position: absolute;
     right: 0;
-    bottom: 0;
     transform: scaleX(-1);
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    width: 285px;
   }
 
   &:hover {
