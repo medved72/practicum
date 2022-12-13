@@ -17,22 +17,7 @@ a {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.background {
   background: $background;
-}
-
-.scroll {
-  height: 100%;
-  overflow: auto;
-}
-
-#__next {
-  height: 100%;
 }
 
 .slick-arrow {
