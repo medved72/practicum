@@ -13,20 +13,18 @@ import { FooterBlock } from "@features/footer-block";
 
 const Page: FC = () => {
   return (
-    <div className="scroll background">
-      <ContentBlock>
-        <Header />
-        <InvitationBlock />
-        <ResponsibilitiesBlock />
-        <DirectionsBlock />
-        <Steps />
-        <Roles />
-        <VacancyBlock />
-        <StoriesBlock />
-        <FaqBlock />
-        <FooterBlock />
-      </ContentBlock>
-    </div>
+    <ContentBlock>
+      <Header />
+      <InvitationBlock />
+      <ResponsibilitiesBlock />
+      <DirectionsBlock />
+      <Steps />
+      <Roles />
+      <VacancyBlock />
+      <StoriesBlock />
+      <FaqBlock />
+      <FooterBlock />
+    </ContentBlock>
   );
 };
 
