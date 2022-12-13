@@ -11,12 +11,19 @@
   }
 
   &__tabButton {
-    border: 0;
+    composes: text-s from '../typography/text.module.scss';
+    line-height: 24px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.85);
     padding: 6px 16px;
     border-radius: 10px;
     background: transparent;
     cursor: pointer;
     transition: all .15s ease;
+    white-space: nowrap;
 
     input {
       width: 0;

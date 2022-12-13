@@ -7,6 +7,14 @@
   grid-template-columns: min-content 1fr;
   gap: 20px;
 
+  &__header {
+    height: 54px;
+  }
+
+  &__image {
+    height: 573px;
+  }
+
   &__tabs {
     display: grid;
     gap: 40px;
@@ -15,7 +23,7 @@
 
   &__arrow {
     position: absolute;
-    top: 202px;
-    right: 3px;
+    top: 199px;
+    right: 1px;
   }
 }

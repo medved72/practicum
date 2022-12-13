@@ -19,7 +19,7 @@ export const Roles: FC = () => {
       <div className={styles.roles__arrow}>
         <RolesArrowImage />
       </div>
-      <div>
+      <div className={styles.roles__image}>
         {activeTab === Role.mentor && (
           <Image src={RolesPeopleMentorImage} alt="" />
         )}
@@ -30,7 +30,9 @@ export const Roles: FC = () => {
       </div>
 
       <div className={styles.roles__tabs}>
-        <Typography.Header level={2}>Роли в нашей команде</Typography.Header>
+        <Typography.Header className={styles.roles__header} level={2}>
+          Роли в нашей команде
+        </Typography.Header>
         <Tabs
           tabs={tabs}
           onChangeActiveTab={(tab) => setActiveTab(() => tab.key as Role)}

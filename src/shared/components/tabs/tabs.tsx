@@ -46,7 +46,7 @@ export const Tabs: FC<TabsProps> = ({ tabs, onChangeActiveTab }) => {
                   onChangeActiveTab?.(tab);
                 }}
               />
-              <Typography.Text size="s">{tab.name}</Typography.Text>
+              {tab.name}
             </label>
           );
         })}

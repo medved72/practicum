@@ -19,7 +19,7 @@ export const VacancyBlock: FC = () => {
         tabs={[
           {
             key: "mentor",
-            name: "Наставник",
+            name: "Для наставников",
             content: (
               <VacancyList
                 key="mentor"
@@ -30,7 +30,7 @@ export const VacancyBlock: FC = () => {
           },
           {
             key: "reviewer",
-            name: "Ревьюер",
+            name: "Для ревьюеров",
             content: (
               <VacancyList
                 key="reviewer"
