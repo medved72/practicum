@@ -19,6 +19,7 @@ export const ModalPageContent: FC<ModalPageContentProps> = ({ children }) => {
         const [entry] = entries;
         if (entry.intersectionRatio > 0.97) {
           router.back();
+          observer.unobserve(backdropRefElement.current);
         }
         backdropRefElement.current.style.setProperty(
           "--intersection-ratio",
