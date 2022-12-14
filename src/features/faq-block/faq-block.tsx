@@ -4,7 +4,7 @@ import styles from "./faq-block.module.scss";
 
 export const FaqBlock: FC = () => {
   return (
-    <div className={styles.faqBlock}>
+    <div id="faq" className={styles.faqBlock}>
       <Typography.Header className={styles.header} level={2}>
         Если остались вопросы
       </Typography.Header>

@@ -12,7 +12,7 @@ import styles from "./directions-block.module.scss";
 
 export const DirectionsBlock: FC = () => {
   return (
-    <div className={styles.directionsBlock}>
+    <div id="directions" className={styles.directionsBlock}>
       <Typography.Header className={styles.directionsBlock__header} level={2}>
         Помогаем развиваться по направлениям
       </Typography.Header>

@@ -15,7 +15,7 @@ export const Roles: FC = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].key as Role);
 
   return (
-    <div className={styles.roles}>
+    <div id="roles" className={styles.roles}>
       <div className={styles.roles__arrow}>
         <RolesArrowImage />
       </div>

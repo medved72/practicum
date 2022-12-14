@@ -8,7 +8,7 @@ import styles from "./vacancy-block.module.scss";
 
 export const VacancyBlock: FC = () => {
   return (
-    <div className={styles.vacancyBlock}>
+    <div id="vacancies" className={styles.vacancyBlock}>
       <div className={styles.vacancyBlock__arrow}>
         <Arrow />
       </div>
