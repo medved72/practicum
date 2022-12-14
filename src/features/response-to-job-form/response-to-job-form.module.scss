@@ -1,0 +1,27 @@
+.responseToJobForm {
+  display: grid;
+  gap: 20px;
+
+  .agreement {
+    padding: 22px 24px;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+
+    input {
+      outline: none;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .button {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    width: 285px;
+  }
+}
+

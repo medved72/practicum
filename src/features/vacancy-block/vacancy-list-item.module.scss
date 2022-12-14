@@ -12,6 +12,7 @@
 
   &__detailsButton {
     composes: button from '../../shared/components/button/button.module.scss';
+    composes: button--default from '../../shared/components/button/button.module.scss';
     align-self: center;
     display: flex;
     justify-content: center;

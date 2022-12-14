@@ -1,0 +1,20 @@
+.responseToJob {
+  display: grid;
+  gap: 80px;
+  padding: 80px;
+
+  &__sections {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 488px 1fr;
+    gap: 122px;
+  }
+
+  &__form {
+    position: sticky;
+    height: min-content;
+    top: 80px;
+  }
+
+  &__description {}
+}

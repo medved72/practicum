@@ -12,6 +12,7 @@ import { FaqBlock } from "@features/faq-block";
 import { FooterBlock } from "@features/footer-block";
 import { useRouter } from "next/router";
 import { ModalPage } from "@shared/components/modal-page";
+import { ResponseToJob } from "@widgets/response-to-job";
 
 const Page: FC = () => {
   const router = useRouter();
@@ -29,7 +30,9 @@ const Page: FC = () => {
       <StoriesBlock />
       <FaqBlock />
       <FooterBlock />
-      <ModalPage isOpen={!!vacancyId}>Content</ModalPage>
+      <ModalPage isOpen={!!vacancyId}>
+        <ResponseToJob />
+      </ModalPage>
     </ContentBlock>
   );
 };

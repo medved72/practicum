@@ -2,6 +2,7 @@ import { FC, ReactNode, useCallback, useEffect, useRef } from "react";
 
 import styles from "./modal-page-content.module.scss";
 import { useRouter } from "next/router";
+import { cn } from "@shared/utils";
 
 interface ModalPageContentProps {
   children?: ReactNode;
@@ -48,7 +49,9 @@ export const ModalPageContent: FC<ModalPageContentProps> = ({ children }) => {
   }, [subscribeToIntersectionBackdrop]);
 
   return (
-    <div className={styles.modalPageContent}>
+    <div
+      className={cn([styles.modalPageContent, styles.modalPageContent__start])}
+    >
       <div className={styles.modalPageContent__body}>{children}</div>
       <div
         ref={backdropRefElement}

@@ -1,8 +1,8 @@
+@import "src/styles/colors";
+
 .button {
   display: flex;
   align-items: center;
-  background: #000;
-  color: white;
   border: none;
   border-radius: 120px;
   transition: background .15s, color .15ms;
@@ -13,11 +13,27 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
+}
 
-  &:not(.disabledHover):hover {
-    background: #FCD559;
+.button--default {
+  color: white;
+  background: #000;
+
+  &:disabled {
+    color: $grey;
+    background: $light-grey;
+    cursor: not-allowed;
+  }
+
+  &:not(.disabledHover):not(:disabled):hover {
+    background: $yellow;
     color: black;
   }
+}
+
+.button--outline {
+  border: 2px solid #000000;
+
 }
 
 .button--medium {

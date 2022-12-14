@@ -1,0 +1,14 @@
+.responseToJobDescription {
+  display: grid;
+  gap: 80px;
+
+  .section {
+    display: grid;
+    gap: 40px;
+  }
+
+  .skills {
+    display: grid;
+    gap: 20px;
+  }
+}
