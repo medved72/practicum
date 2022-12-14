@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { ContentBlock } from "@shared/components";
-import { Header } from "@shared/components";
+import { Header } from "@features/header";
 import { InvitationBlock } from "@features/invitation-block";
 import { ResponsibilitiesBlock } from "@features/responsibilities-block";
 import { DirectionsBlock } from "@features/directions-block";
