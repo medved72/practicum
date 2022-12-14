@@ -1,17 +1,19 @@
 import { FC, useCallback, useRef, useState } from "react";
 import { CardHeader, Typography } from "@shared/components";
 import { cn } from "@shared/utils";
-import IrinaVideo from "@shared/assets/video/irina-video.mp4";
-import IrinaPoster from "@shared/assets/video/irina-poster.png";
 import PlayImage from "@shared/assets/images/play.svg";
 import styles from "./stories-card.module.scss";
-import Image from "next/image";
 
 export const StoriesCard: FC<{
   name: string;
   position: string;
   text: string;
-}> = ({ name, position, text }) => {
+  poster: {
+    url: string;
+    alt: string;
+  };
+  videoUrl: string;
+}> = ({ name, position, text, poster, videoUrl }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [playPressed, setPlayPressed] = useState(false);
 
@@ -24,12 +26,16 @@ export const StoriesCard: FC<{
     <div className={styles.storiesCard}>
       <div className={styles.videoContainer}>
         <div className={cn([styles.video, playPressed && styles.playPressed])}>
-          <Image className={styles.backgroundImage} src={IrinaPoster} alt="" />
+          <img
+            className={styles.backgroundImage}
+            src={poster.url}
+            alt={poster.alt}
+          />
           <button className={styles.play} onClick={playVideo}>
             <PlayImage />
           </button>
           <video ref={videoRef} autoPlay={false} preload="auto" controls>
-            <source src={IrinaVideo} />
+            <source src={videoUrl} />
           </video>
         </div>
       </div>
