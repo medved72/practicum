@@ -35,3 +35,7 @@ body {
 .slick-slide > div:first-child{
   height: 100%;
 }
+
+.ReactModal__Body--open {
+  overflow: hidden;
+}

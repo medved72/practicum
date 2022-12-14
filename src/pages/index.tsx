@@ -10,8 +10,13 @@ import { VacancyBlock } from "@features/vacancy-block";
 import { StoriesBlock } from "@features/stories-block";
 import { FaqBlock } from "@features/faq-block";
 import { FooterBlock } from "@features/footer-block";
+import { useRouter } from "next/router";
+import { ModalPage } from "@shared/components/modal-page";
 
 const Page: FC = () => {
+  const router = useRouter();
+  const { vacancyId } = router.query;
+
   return (
     <ContentBlock>
       <Header />
@@ -24,6 +29,7 @@ const Page: FC = () => {
       <StoriesBlock />
       <FaqBlock />
       <FooterBlock />
+      <ModalPage isOpen={!!vacancyId}>Content</ModalPage>
     </ContentBlock>
   );
 };

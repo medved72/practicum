@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Vacancy } from "./data";
-import { Button, CardHeader, Typography } from "@shared/components";
+import { CardHeader, Typography } from "@shared/components";
+import Link from "next/link";
 
 import styles from "./vacancy-list-item.module.scss";
 
@@ -17,9 +18,14 @@ export const VacancyListItem: FC<{ prefix?: string; vacancy: Vacancy }> = ({
         </div>
         <Typography.Text size="l">{vacancy.description}</Typography.Text>
       </div>
-      <Button className={styles.vacancyListItem__detailsButton} size="medium">
+      <Link
+        href={`/?vacancyId=${vacancy.id}`}
+        as={`/vacancy/${vacancy.id}`}
+        scroll={false}
+        className={styles.vacancyListItem__detailsButton}
+      >
         Подробнее
-      </Button>
+      </Link>
     </div>
   );
 };

@@ -1,0 +1,25 @@
+@import "src/styles/colors";
+
+.modalPageContent {
+  &__body {
+    background: $background;
+    min-height: 100vh;
+  }
+
+  &__backdrop {
+    cursor: pointer;
+    position: relative;
+    height: 100vh;
+    color: white;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.9);
+    opacity: calc(1 - var(--intersection-ratio));
+  }
+
+  &__backdropText {
+    transition-timing-function: ease-in-out;
+    position: absolute;
+    top: calc(100vh/2 *  var(--intersection-ratio));
+    left: 50%;
+  }
+}
