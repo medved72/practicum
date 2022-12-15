@@ -4,8 +4,8 @@ import { ResponseToJob } from "@widgets/response-to-job";
 
 const Page: FC = () => {
   const router = useRouter();
-  const { vacancyId } = router.query;
-  return <ResponseToJob />;
+  const { vacancyId } = router.query as Record<string, string>;
+  return <ResponseToJob vacancyId={vacancyId} />;
 };
 
 export default Page;

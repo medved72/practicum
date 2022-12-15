@@ -1,23 +1,32 @@
 import { FC } from "react";
 import { Accordion } from "@shared/components";
 
+import { VacancyGroupItem } from "./vacancy-block.model";
+import { CategoryToLabelMap } from "./vacancy-block.const";
 import { VacancyListItem } from "./vacancy-list-item";
 import { EmptyVacancy } from "./empty-vacancy";
-import { VacancyGroup } from "./data";
 
 import styles from "./vacancy-list.module.scss";
 
-export const VacancyList: FC<{
+interface VacancyListProps {
   vacancyPrefix: string;
-  vacancyGroups: VacancyGroup[];
-}> = ({ vacancyGroups, vacancyPrefix }) => {
+  vacancyGroups: VacancyGroupItem[];
+}
+
+export const VacancyList: FC<VacancyListProps> = ({
+  vacancyGroups,
+  vacancyPrefix,
+}) => {
   return (
     <div className={styles.vacancyList}>
       <Accordion>
-        {vacancyGroups.map((vacancyGroup) => (
-          <Accordion.Item key={vacancyGroup.name} label={vacancyGroup.name}>
-            {vacancyGroup.vacancies.length > 0 ? (
-              vacancyGroup.vacancies.map((vacancy) => (
+        {vacancyGroups.map((vacancy) => (
+          <Accordion.Item
+            key={vacancy.category}
+            label={CategoryToLabelMap[vacancy.category]}
+          >
+            {vacancy.vacancies.length > 0 ? (
+              vacancy.vacancies.map((vacancy) => (
                 <VacancyListItem
                   key={vacancy.id}
                   prefix={vacancyPrefix}
