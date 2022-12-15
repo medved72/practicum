@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, SyntheticEvent, useRef, useState } from "react";
 import {
   Button,
   ContentBlock,
@@ -12,6 +12,33 @@ import styles from "./vacancy-not-found.module.scss";
 import Image from "next/image";
 
 export const VacancyNotFound: FC = () => {
+  const [isValid, setIsValid] = useState(false);
+
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const validateForm = (values: any): boolean => {
+    return !(
+      !values.agreement ||
+      !values.fio ||
+      !values.link ||
+      !values.email ||
+      !values.phone ||
+      !values.direction ||
+      !values.role
+    );
+  };
+
+  const handleChange = () => {
+    if (!formRef.current) return;
+    const formData = new FormData(formRef.current);
+    const formValid = validateForm(Object.fromEntries(formData));
+    setIsValid(formValid);
+  };
+
+  const handleSubmit = (e: SyntheticEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+  };
+
   return (
     <ContentBlock className={styles.vacancyNotFound}>
       <div className={styles.vacancyNotFound__header}>
@@ -28,7 +55,12 @@ export const VacancyNotFound: FC = () => {
       </div>
       <div className={styles.vacancyNotFound__body}>
         <Image src={VacancyNotFoundImage} alt={""} />
-        <form className={styles.vacancyNotFound__form}>
+        <form
+          ref={formRef}
+          className={styles.vacancyNotFound__form}
+          onChange={handleChange}
+          onSubmit={handleSubmit}
+        >
           <Input placeholder="Имя фамилия" name="fio" />
           <Input placeholder="Электронная почта" name="email" type="email" />
           <Input placeholder="Телефон" name="phone" type="tel" />
@@ -50,7 +82,7 @@ export const VacancyNotFound: FC = () => {
               { label: "Ревьюер", value: "Ревьюер" },
             ]}
           />
-          <Input placeholder={"Ссылка на ваше резюме"} name={"link"} />
+          <Input placeholder={"Ссылка на ваше резюме"} name="link" />
           <label className={styles.agreement}>
             <input type="checkbox" name="agreement" />
             <Typography.Text size="supportive-s">
@@ -59,7 +91,7 @@ export const VacancyNotFound: FC = () => {
             </Typography.Text>
           </label>
 
-          <Button className={styles.send} disabled>
+          <Button className={styles.send} htmlType="submit" disabled={!isValid}>
             Отправить заявку
           </Button>
         </form>
