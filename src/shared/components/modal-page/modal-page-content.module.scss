@@ -27,5 +27,6 @@
     position: absolute;
     top: calc(100vh/2 *  var(--intersection-ratio));
     left: 50%;
+    transform: translateX(-50%);
   }
 }
