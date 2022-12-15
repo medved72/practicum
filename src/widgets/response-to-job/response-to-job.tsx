@@ -2,12 +2,12 @@ import { FC, useEffect, useState } from "react";
 import { ContentBlock, Typography } from "@shared/components";
 import { ResponseToJobForm } from "@features/response-to-job-form";
 import { ResponseToJobDescription } from "@features/response-to-job-description";
+import { VacancyDto, VacancyType } from "@shared/api";
 
 import styles from "./response-to-job.module.scss";
-import { getVacancyById, VacancyDto, VacancyType } from "@shared/api";
 
 interface ResponseToJobProps {
-  vacancyId?: string;
+  vacancy: VacancyDto | null;
 }
 
 const prefixTitleMap: Record<VacancyType, string> = {
@@ -15,16 +15,8 @@ const prefixTitleMap: Record<VacancyType, string> = {
   [VacancyType.REVIEWER]: "Ревьюер на курс",
 };
 
-export const ResponseToJob: FC<ResponseToJobProps> = ({ vacancyId }) => {
-  const [vacancy, setVacancy] = useState<VacancyDto | null>(null);
-
-  useEffect(() => {
-    if (!!vacancyId) {
-      getVacancyById(vacancyId).then(setVacancy);
-    }
-  }, [vacancyId]);
-
-  if (!vacancyId || !vacancy) {
+export const ResponseToJob: FC<ResponseToJobProps> = ({ vacancy }) => {
+  if (!vacancy) {
     return <ContentBlock>Вакансия не найдена</ContentBlock>;
   }
 
@@ -41,7 +33,11 @@ export const ResponseToJob: FC<ResponseToJobProps> = ({ vacancyId }) => {
           <ResponseToJobForm />
         </div>
         <div className={styles.responseToJob__description}>
-          <ResponseToJobDescription />
+          <ResponseToJobDescription
+            responsibilities={vacancy.responsibilities}
+            terms={vacancy.terms}
+            requirements={vacancy.requirements}
+          />
         </div>
       </div>
     </ContentBlock>

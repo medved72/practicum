@@ -5,3 +5,4 @@ export * from "./button";
 export * from "./card";
 export * from "./accordion";
 export * from "./tabs";
+export * from "./modal-page";

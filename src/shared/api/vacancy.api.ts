@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 export enum VacancyCategory {
   PROGRAMMING = "PROGRAMMING",
   DATA_ANALYZING = "DATA_ANALYZING",
@@ -106,4 +108,14 @@ export const getVacancyById = async (
   id: string
 ): Promise<VacancyDto | null> => {
   return vacancies.find((vacancy) => vacancy.id === id) ?? null;
+};
+
+export const useVacancy = (id: string) => {
+  const [vacancy, setVacancy] = useState<VacancyDto | null>(null);
+
+  useEffect(() => {
+    getVacancyById(id).then(setVacancy);
+  }, [id]);
+
+  return vacancy;
 };

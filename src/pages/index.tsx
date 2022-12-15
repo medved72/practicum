@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ContentBlock } from "@shared/components";
+import { ContentBlock, ModalPage } from "@shared/components";
 import { Header } from "@features/header";
 import { InvitationBlock } from "@features/invitation-block";
 import { ResponsibilitiesBlock } from "@features/responsibilities-block";
@@ -10,10 +10,14 @@ import { VacancyBlock, VacancyBlockProps } from "@features/vacancy-block";
 import { StoriesBlock } from "@features/stories-block";
 import { FaqBlock } from "@features/faq-block";
 import { FooterBlock } from "@features/footer-block";
-import { useRouter } from "next/router";
 import { GetStaticProps } from "next";
-import { getVacancies, VacancyCategory, VacancyType } from "@shared/api";
-import { ModalPage } from "@shared/components/modal-page";
+import {
+  getVacancies,
+  useVacancy,
+  VacancyCategory,
+  VacancyType,
+} from "@shared/api";
+import { useRouter } from "next/router";
 import { ResponseToJob } from "@widgets/response-to-job";
 
 interface PageProps {
@@ -23,6 +27,7 @@ interface PageProps {
 const Page: FC<PageProps> = ({ vacancies }) => {
   const router = useRouter();
   const { vacancyId } = router.query as Record<string, string>;
+  const vacancy = useVacancy(vacancyId);
 
   return (
     <ContentBlock>
@@ -37,7 +42,7 @@ const Page: FC<PageProps> = ({ vacancies }) => {
       <FaqBlock />
       <FooterBlock />
       <ModalPage isOpen={!!vacancyId}>
-        <ResponseToJob vacancyId={vacancyId} />
+        <ResponseToJob vacancy={vacancy} />
       </ModalPage>
     </ContentBlock>
   );

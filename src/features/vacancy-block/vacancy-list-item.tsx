@@ -1,13 +1,16 @@
 import { FC } from "react";
 import { CardHeader, Typography } from "@shared/components";
+import { useRouter } from "next/router";
 import Link from "next/link";
+import { ResponseToJob } from "@widgets/response-to-job";
+import { VacancyDto } from "@shared/api";
+import { ModalPage } from "@shared/components/modal-page";
 
 import styles from "./vacancy-list-item.module.scss";
-import { VacancyDto } from "@shared/api";
 
 export const VacancyListItem: FC<{
   prefix?: string;
-  vacancy: Pick<VacancyDto, "name" | "description" | "id">;
+  vacancy: VacancyDto;
 }> = ({ prefix, vacancy }) => {
   return (
     <div className={styles.vacancyListItem}>
