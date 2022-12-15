@@ -1,11 +1,11 @@
 import { FC } from "react";
-import { Vacancy } from "./data";
 import { CardHeader, Typography } from "@shared/components";
 import Link from "next/link";
 
 import styles from "./vacancy-list-item.module.scss";
+import { VacancyDto } from "@shared/api";
 
-export const VacancyListItem: FC<{ prefix?: string; vacancy: Vacancy }> = ({
+export const VacancyListItem: FC<{ prefix?: string; vacancy: VacancyDto }> = ({
   prefix,
   vacancy,
 }) => {
@@ -14,7 +14,7 @@ export const VacancyListItem: FC<{ prefix?: string; vacancy: Vacancy }> = ({
       <div className={styles.vacancyListItem__description}>
         <div>
           {!!prefix && <CardHeader size="l">{prefix}</CardHeader>}
-          <CardHeader size="l">{vacancy.title}</CardHeader>
+          <CardHeader size="l">{vacancy.name}</CardHeader>
         </div>
         <Typography.Text size="l">{vacancy.description}</Typography.Text>
       </div>
