@@ -6,3 +6,5 @@ export * from "./card";
 export * from "./accordion";
 export * from "./tabs";
 export * from "./modal-page";
+export * from "./input";
+export * from "./select";

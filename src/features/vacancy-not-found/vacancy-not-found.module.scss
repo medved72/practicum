@@ -1,0 +1,45 @@
+@import "src/styles/colors";
+
+.vacancyNotFound {
+  padding: 80px 0;
+
+  &__header {
+
+  }
+
+  &__headerText {
+    color: $grey;
+    margin-top: 14px;
+  }
+
+  &__body {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    margin-top: 80px;
+  }
+
+  .agreement {
+    padding: 22px 24px;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+
+    input {
+      outline: none;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__form {
+    display: grid;
+    gap: 20px;
+  }
+
+  .send {
+    justify-self: center;
+  }
+}

@@ -1,7 +1,8 @@
-import { FC, useEffect, useState } from "react";
-import { ContentBlock, Typography } from "@shared/components";
+import { FC } from "react";
 import { ResponseToJobForm } from "@features/response-to-job-form";
 import { ResponseToJobDescription } from "@features/response-to-job-description";
+import { VacancyNotFound } from "@features/vacancy-not-found";
+import { ContentBlock, Typography } from "@shared/components";
 import { VacancyDto, VacancyType } from "@shared/api";
 
 import styles from "./response-to-job.module.scss";
@@ -17,7 +18,7 @@ const prefixTitleMap: Record<VacancyType, string> = {
 
 export const ResponseToJob: FC<ResponseToJobProps> = ({ vacancy }) => {
   if (!vacancy) {
-    return <ContentBlock>Вакансия не найдена</ContentBlock>;
+    return <VacancyNotFound />;
   }
 
   return (

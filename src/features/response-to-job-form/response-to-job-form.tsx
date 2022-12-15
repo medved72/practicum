@@ -1,6 +1,5 @@
-import { Button, Typography } from "@shared/components";
 import { FC, SyntheticEvent, useRef, useState } from "react";
-import { Input } from "./input";
+import { Button, Typography, Input } from "@shared/components";
 
 import styles from "./response-to-job-form.module.scss";
 

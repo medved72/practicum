@@ -1,0 +1,55 @@
+@import "../../../styles/colors";
+
+.field {
+  display: block;
+  position: relative;
+  padding: 11px 0;
+  height: 86px;
+
+  .placeholder {
+    position: absolute;
+    font-family: 'YS Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    transition: all .3s;
+    top: 24px;
+    left: 0;
+    color: $grey;
+    cursor: text;
+    pointer-events: none;
+  }
+
+  .input {
+    margin-top: 4px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $grey;
+    outline: none;
+    background: transparent;
+    font-family: 'YS Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    padding: 10px 0;
+
+    &:not(:placeholder-shown) ~ .placeholder {
+      top: 0;
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    &:focus ~ .placeholder {
+      top: 0;
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}
+
