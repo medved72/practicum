@@ -6,7 +6,7 @@ export const EmptyVacancy: FC = () => {
     <VacancyListItem
       vacancy={{
         id: "not-found",
-        title: "Таких вакансий пока нет ",
+        name: "Таких вакансий пока нет ",
         description:
           "Оставьте заявку на вакансию, когда будут места мы с вами свяжимся",
       }}

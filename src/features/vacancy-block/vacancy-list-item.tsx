@@ -5,10 +5,10 @@ import Link from "next/link";
 import styles from "./vacancy-list-item.module.scss";
 import { VacancyDto } from "@shared/api";
 
-export const VacancyListItem: FC<{ prefix?: string; vacancy: VacancyDto }> = ({
-  prefix,
-  vacancy,
-}) => {
+export const VacancyListItem: FC<{
+  prefix?: string;
+  vacancy: Pick<VacancyDto, "name" | "description" | "id">;
+}> = ({ prefix, vacancy }) => {
   return (
     <div className={styles.vacancyListItem}>
       <div className={styles.vacancyListItem__description}>
