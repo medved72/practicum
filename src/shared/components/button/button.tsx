@@ -8,7 +8,7 @@ interface ButtonProps {
   disabledHover?: boolean;
   size?: "medium" | "small";
   disabled?: boolean;
-  type?: "default" | "outline";
+  type?: "default" | "outline" | "icon";
   htmlType?: "button" | "submit" | "reset";
   onClick?: () => void;
 }

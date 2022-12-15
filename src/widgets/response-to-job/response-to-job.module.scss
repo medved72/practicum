@@ -1,7 +1,7 @@
 .responseToJob {
   display: grid;
   gap: 80px;
-  padding: 80px;
+  padding: 80px 0;
 
   &__sections {
     display: grid;
@@ -13,7 +13,7 @@
   &__form {
     position: sticky;
     height: min-content;
-    top: 80px;
+    top: 40px;
   }
 
   &__description {}

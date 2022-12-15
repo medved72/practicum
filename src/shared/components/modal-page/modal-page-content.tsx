@@ -1,8 +1,9 @@
 import { FC, ReactNode, useCallback, useEffect, useRef } from "react";
-
-import styles from "./modal-page-content.module.scss";
 import { useRouter } from "next/router";
 import { cn } from "@shared/utils";
+import CloseImage from "@shared/assets/images/close.svg";
+import styles from "./modal-page-content.module.scss";
+import { Button, ContentBlock } from "@shared/components";
 
 interface ModalPageContentProps {
   children?: ReactNode;
@@ -53,14 +54,21 @@ export const ModalPageContent: FC<ModalPageContentProps> = ({ children }) => {
     <div
       className={cn([styles.modalPageContent, styles.modalPageContent__start])}
     >
-      <div className={styles.modalPageContent__body}>{children}</div>
+      <div className={styles.modalPageContent__body}>
+        <ContentBlock className={styles.modalPageContent__close}>
+          <Button onClick={() => router.back()} type="icon">
+            <CloseImage />
+          </Button>
+        </ContentBlock>
+        {children}
+      </div>
       <div
         ref={backdropRefElement}
         className={styles.modalPageContent__backdrop}
         onClick={() => router.back()}
       >
         <div className={styles.modalPageContent__backdropText}>
-          Scroll to close
+          Прокрутите, чтобы закрыть
         </div>
       </div>
     </div>

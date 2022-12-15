@@ -15,6 +15,14 @@
   line-height: 130%;
 }
 
+.button--medium {
+  padding: 18.5px 38px;
+}
+
+.button--small {
+  padding: 8.5px 50px;
+}
+
 .button--default {
   color: white;
   background: #000;
@@ -33,13 +41,11 @@
 
 .button--outline {
   border: 2px solid #000000;
-
 }
 
-.button--medium {
-  padding: 18.5px 38px;
-}
-
-.button--small {
-  padding: 8.5px 50px;
+.button--icon {
+  padding: 0;
+  width: min-content;
+  height: min-content;
+  background: transparent;
 }
