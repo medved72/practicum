@@ -3,7 +3,9 @@ import { Button, Typography, Input } from "@shared/components";
 
 import styles from "./response-to-job-form.module.scss";
 
-interface ResponseToJobFormProps {}
+interface ResponseToJobFormProps {
+  onSubmit: (values: FormValues) => void;
+}
 
 interface FormValues {
   fio: string;
@@ -13,7 +15,7 @@ interface FormValues {
   agreement: boolean;
 }
 
-export const ResponseToJobForm: FC<ResponseToJobFormProps> = () => {
+export const ResponseToJobForm: FC<ResponseToJobFormProps> = ({ onSubmit }) => {
   const [isValid, setIsValid] = useState(false);
 
   const formRef = useRef<HTMLFormElement>(null);
@@ -49,6 +51,9 @@ export const ResponseToJobForm: FC<ResponseToJobFormProps> = () => {
 
   const handleSubmit = (e: SyntheticEvent<HTMLFormElement>): void => {
     e.preventDefault();
+    if (!formRef.current) return;
+    const formData = new FormData(formRef.current);
+    onSubmit(Object.fromEntries(formData) as unknown as FormValues);
   };
 
   return (

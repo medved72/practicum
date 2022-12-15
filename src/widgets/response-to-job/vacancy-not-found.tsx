@@ -1,4 +1,5 @@
 import { FC, SyntheticEvent, useRef, useState } from "react";
+import Image from "next/image";
 import {
   Button,
   ContentBlock,
@@ -9,9 +10,10 @@ import {
 import VacancyNotFoundImage from "@shared/assets/images/vacancy-not-found.png";
 
 import styles from "./vacancy-not-found.module.scss";
-import Image from "next/image";
+import { RequestSendSuccessfullModal } from "@features/request-send-successfull-modal";
 
 export const VacancyNotFound: FC = () => {
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [isValid, setIsValid] = useState(false);
 
   const formRef = useRef<HTMLFormElement>(null);
@@ -37,6 +39,7 @@ export const VacancyNotFound: FC = () => {
 
   const handleSubmit = (e: SyntheticEvent<HTMLFormElement>): void => {
     e.preventDefault();
+    setShowSuccessModal(true);
   };
 
   return (
@@ -96,6 +99,7 @@ export const VacancyNotFound: FC = () => {
           </Button>
         </form>
       </div>
+      <RequestSendSuccessfullModal isOpen={showSuccessModal} />
     </ContentBlock>
   );
 };
