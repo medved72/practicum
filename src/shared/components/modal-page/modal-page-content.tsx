@@ -19,7 +19,7 @@ export const ModalPageContent: FC<ModalPageContentProps> = ({ children }) => {
         if (!backdropRefElement.current) return;
         const [entry] = entries;
         if (entry.intersectionRatio > 0.97) {
-          router.back();
+          router.push("/", {}, { scroll: false });
           observer.unobserve(backdropRefElement.current);
         }
         backdropRefElement.current.style.setProperty(
@@ -56,7 +56,10 @@ export const ModalPageContent: FC<ModalPageContentProps> = ({ children }) => {
     >
       <div className={styles.modalPageContent__body}>
         <ContentBlock className={styles.modalPageContent__close}>
-          <Button onClick={() => router.back()} type="icon">
+          <Button
+            onClick={() => router.push("/", {}, { scroll: false })}
+            type="icon"
+          >
             <CloseImage />
           </Button>
         </ContentBlock>
@@ -65,7 +68,7 @@ export const ModalPageContent: FC<ModalPageContentProps> = ({ children }) => {
       <div
         ref={backdropRefElement}
         className={styles.modalPageContent__backdrop}
-        onClick={() => router.back()}
+        onClick={() => router.push("/", {}, { scroll: false })}
       >
         <div className={styles.modalPageContent__backdropText}>
           Прокрутите, чтобы закрыть
