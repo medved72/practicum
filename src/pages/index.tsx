@@ -35,7 +35,7 @@ const Page: FC<PageProps> = ({ vacancies }) => {
       <InvitationBlock />
       <ResponsibilitiesBlock />
       <DirectionsBlock />
-      {/*<Steps />*/}
+      <Steps />
       {/*<Roles />*/}
       {/*<VacancyBlock vacancies={vacancies} />*/}
       {/*<StoriesBlock />*/}

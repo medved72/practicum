@@ -5,18 +5,16 @@ import InvitationPeoplesMobilePng from "@shared/assets/images/invitation-people-
 import InvitationBubbleYellowBigImage from "@shared/assets/images/invitation-bubble-yellow-big.svg";
 import InvitationBubbleYellowSmallImage from "@shared/assets/images/invitation-bubble-yellow-small.svg";
 import InvitationBubbleBlueImage from "@shared/assets/images/invitation-bubble-blue.svg";
-import { useWindowSize } from "@shared/hooks";
+import { useIsMobile } from "@shared/hooks";
 
 import styles from "./invitation-block-image.module.scss";
 
 export const InvitationBlockImage: FC = () => {
-  const windowSize = useWindowSize();
+  const isMobile = useIsMobile();
 
   const mainImage = useMemo(() => {
-    return windowSize.width <= 980
-      ? InvitationPeoplesMobilePng
-      : InvitationPeoplesPng;
-  }, [windowSize.width]);
+    return isMobile ? InvitationPeoplesMobilePng : InvitationPeoplesPng;
+  }, [isMobile]);
 
   const imageWrapperRef = useRef<HTMLDivElement>(null);
 

@@ -1,6 +1,6 @@
 import { ComponentProps, FC } from "react";
 import { Grid, Typography } from "@shared/components";
-import { useWindowSize } from "@shared/hooks";
+import { useIsMobile } from "@shared/hooks";
 
 import { SmallCard } from "./small-card";
 import { BigCard } from "./big-card";
@@ -54,9 +54,9 @@ const DesktopResponsibilities: FC = () => {
 };
 
 export const ResponsibilitiesBlock: FC = () => {
-  const windowSize = useWindowSize();
+  const isMobile = useIsMobile();
 
-  if (windowSize.width <= 980) {
+  if (isMobile) {
     return <MobileResponsibilities />;
   }
 

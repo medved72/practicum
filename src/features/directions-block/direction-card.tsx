@@ -1,7 +1,7 @@
 import { FC, ReactNode } from "react";
 import { Button, Card, Typography } from "@shared/components";
 import { cn } from "@shared/utils";
-import { useWindowSize } from "@shared/hooks";
+import { useIsMobile, useWindowSize } from "@shared/hooks";
 import ArrowMobImage from "@shared/assets/images/arrow_mob.svg";
 
 import styles from "./direction-card.module.scss";
@@ -93,9 +93,9 @@ export const DirectionCard: FC<{
   text: string;
   hidePreviewOnDesktop?: boolean;
 }> = (props) => {
-  const windowSize = useWindowSize();
+  const isMobile = useIsMobile();
 
-  if (windowSize.width < 980) {
+  if (isMobile) {
     return <DirectionCardMobile {...props} />;
   }
 
