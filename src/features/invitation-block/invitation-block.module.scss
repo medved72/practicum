@@ -28,8 +28,9 @@
 
   .title {
     max-width: 692px;
+
     @include for-phone {
-      max-width: initial;
+      max-width: var(--max-content-width);
     }
   }
 
@@ -43,7 +44,7 @@
     @include for-phone {
       margin-top: 24px;
       margin-bottom: 14px;
-      max-width: initial;
+      max-width: var(--max-content-width);
       grid-row-start: initial;
     }
   }

@@ -13,7 +13,7 @@ export const InvitationBlockImage: FC = () => {
   const windowSize = useWindowSize();
 
   const mainImage = useMemo(() => {
-    return windowSize.width <= 1000
+    return windowSize.width <= 980
       ? InvitationPeoplesMobilePng
       : InvitationPeoplesPng;
   }, [windowSize.width]);

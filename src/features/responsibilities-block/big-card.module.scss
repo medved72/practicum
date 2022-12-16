@@ -1,18 +1,37 @@
 @import "src/styles/colors";
+@import "src/styles/mixins";
 
 .bigCard {
   position: relative;
   height: 473px;
   overflow: hidden;
+  max-width: calc(var(--max-content-width) - 40px);
+
+  @include for-phone {
+    height: auto;
+    min-height: 413px;
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    padding: 16px;
+    //margin: 0 10px;
+  }
 
   &__header {
     width: 356px;
+
+    @include for-phone {
+      width: calc(var(--max-content-width) - 96px);
+    }
   }
 
   &__text {
-    margin-top: 24px;
+    margin-top: 12px;
     width: 356px;
     color: $grey;
+
+    @include for-phone {
+      width: calc(var(--max-content-width) - 96px);
+    }
   }
 
   &__image {
@@ -21,6 +40,13 @@
       right: 0;
       bottom: 0;
       transition: all .3s ease;
+      margin: -16px -16px -20px -16px;
+
+      @include for-phone {
+        width: calc(var(--max-content-width) - 40px);
+        height: auto;
+        position: initial;
+      }
     }
   }
 

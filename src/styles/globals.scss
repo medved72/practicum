@@ -2,6 +2,18 @@
 @import "colors";
 @import "fonts";
 @import "helpers";
+@import "breakpoints";
+@import "mixins";
+
+:root {
+  --max-content-width: #{$desktop-max-content-width};
+}
+
+@include for-phone {
+  :root {
+    --max-content-width: #{$mobile-max-content-width};
+  }
+}
 
 * {
   padding: 0;
@@ -38,4 +50,34 @@ body {
 
 .ReactModal__Body--open {
   overflow: hidden;
+}
+
+@include for-phone {
+  .slick-dots {
+    display: flex !important;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+
+    li {
+      line-height: 12px;
+      list-style: none;
+
+      button {
+        border: none;
+        border-radius: 50%;
+        background: $light-grey;
+        width: 12px;
+        height: 12px;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+
+      }
+
+      &.slick-active button{
+        background: $yellow;
+      }
+    }
+  }
 }

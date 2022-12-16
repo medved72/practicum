@@ -1,3 +1,5 @@
+@import "./breakpoints";
+
 @mixin bubbleAnimate($topStart, $topEnd, $leftStart, $leftEnd) {
   $topDiff: $topEnd - $topStart;
   $leftDiff: $leftEnd - $leftStart;
@@ -7,7 +9,7 @@
 }
 
 @mixin for-phone {
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: $mobile-breakpoint) {
     @content;
   }
 }

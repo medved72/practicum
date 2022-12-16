@@ -2,11 +2,7 @@
 
 .content {
   margin: 0 auto;
-  width: 1200px;
-
-  @include for-phone {
-    overflow: hidden;
-    width: 100vw;
-  }
+  width: var(--max-content-width);
+  overflow: hidden;
 }
 
