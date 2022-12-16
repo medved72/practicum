@@ -15,13 +15,35 @@
 
 .imageWrapper {
   height: 540px;
+  width: 1px;
   position: relative;
+
+  .image {
+    position: absolute;
+    right: 0;
+  }
+
+  .bubbleBlue, .bubbleYellowSmall, .bubbleYellowBig {
+    position: absolute;
+  }
+
+  .bubbleBlue {
+    top: calc(37px + 57px * var(--intersection-ratio));
+    right: calc(334px + 60px * var(--intersection-ratio));
+  }
+
+  .bubbleYellowSmall {
+    top: calc(171px - 37px * var(--intersection-ratio));
+    right: calc(481px - 112px * var(--intersection-ratio));
+  }
+
+  .bubbleYellowBig {
+    top: calc(430px + 35px * var(--intersection-ratio));
+    right: calc(114px + 95px * var(--intersection-ratio));
+  }
 }
 
-.image {
-  position: absolute;
-  right: 0;
-}
+
 
 .title {
   width: 692px;

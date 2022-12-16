@@ -3,6 +3,7 @@
 .bigCard {
   position: relative;
   height: 473px;
+  overflow: hidden;
 
   &__header {
     width: 356px;
@@ -19,6 +20,13 @@
       position: absolute;
       right: 0;
       bottom: 0;
+      transition: all .3s ease;
+    }
+  }
+
+  &:hover {
+    img {
+      right: -60px;
     }
   }
 }

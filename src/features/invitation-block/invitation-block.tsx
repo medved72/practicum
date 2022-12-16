@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Button, Typography } from "@shared/components";
-import InvitationPeoplesPng from "@shared/assets/images/invitation-people.png";
-import Image from "next/image";
+import { InvitationBlockImage } from "./invitation-block-image";
+
 import styles from "./invitation-block.module.scss";
 
 export const InvitationBlock: FC = () => {
@@ -17,9 +17,7 @@ export const InvitationBlock: FC = () => {
         </Typography.Text>
         <Button>Хочу делиться знаниями</Button>
       </div>
-      <div className={styles.imageWrapper}>
-        <Image className={styles.image} src={InvitationPeoplesPng} alt="" />
-      </div>
+      <InvitationBlockImage />
     </div>
   );
 };
