@@ -17,24 +17,22 @@ const settings: ComponentProps<typeof Slider> = {
   dots: true,
 };
 
-export const ResponsibilitiesBlock: FC = () => {
-  const windowSize = useWindowSize();
+const MobileResponsibilities: FC = () => {
+  return (
+    <div className={styles.responsibilitiesBlock}>
+      <Typography.Header className={styles.header} level={2}>
+        В роли эксперта Практикума вы будете
+      </Typography.Header>
+      <Slider {...settings}>
+        {responsibilities.map((responsibility, index) => (
+          <BigCard key={index} {...responsibility} />
+        ))}
+      </Slider>
+    </div>
+  );
+};
 
-  if (windowSize.width <= 980) {
-    return (
-      <div className={styles.responsibilitiesBlock}>
-        <Typography.Header className={styles.header} level={2}>
-          В роли эксперта Практикума вы будете
-        </Typography.Header>
-        <Slider {...settings}>
-          {responsibilities.map((responsibility, index) => (
-            <BigCard key={index} {...responsibility} />
-          ))}
-        </Slider>
-      </div>
-    );
-  }
-
+const DesktopResponsibilities: FC = () => {
   return (
     <div className={styles.responsibilitiesBlock}>
       <Typography.Header level={2} className={styles.header}>
@@ -53,4 +51,14 @@ export const ResponsibilitiesBlock: FC = () => {
       </Grid>
     </div>
   );
+};
+
+export const ResponsibilitiesBlock: FC = () => {
+  const windowSize = useWindowSize();
+
+  if (windowSize.width <= 980) {
+    return <MobileResponsibilities />;
+  }
+
+  return <DesktopResponsibilities />;
 };
