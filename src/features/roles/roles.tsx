@@ -1,13 +1,10 @@
 import { FC, useState } from "react";
-import Image from "next/image";
-import RolesPeopleMentorImage from "@shared/assets/images/roles-peoples-mentor.png";
-import RolesPeopleReviewerImage from "@shared/assets/images/roles-peoples-reviewer.png";
 import RolesArrowImage from "@shared/assets/images/roles-arrow.svg";
-import { Typography } from "@shared/components";
-import { Tabs } from "@shared/components";
+import { Tabs, Typography } from "@shared/components";
 import { makeRolesTabsMap, Role } from "./utils";
 
 import styles from "./roles.module.scss";
+import { RolesImage } from "@features/roles/roles-image";
 
 export const tabs = makeRolesTabsMap([Role.mentor, Role.reviewer]);
 
@@ -19,15 +16,7 @@ export const Roles: FC = () => {
       <div className={styles.roles__arrow}>
         <RolesArrowImage />
       </div>
-      <div className={styles.roles__image}>
-        {activeTab === Role.mentor && (
-          <Image src={RolesPeopleMentorImage} alt="" />
-        )}
-
-        {activeTab === Role.reviewer && (
-          <Image src={RolesPeopleReviewerImage} alt="" />
-        )}
-      </div>
+      <RolesImage activeTab={activeTab} />
 
       <div className={styles.roles__tabs}>
         <Typography.Header className={styles.roles__header} level={2}>

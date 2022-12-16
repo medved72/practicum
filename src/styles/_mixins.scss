@@ -1,0 +1,7 @@
+@mixin bubbleAnimate($topStart, $topEnd, $leftStart, $leftEnd) {
+  $topDiff: $topEnd - $topStart;
+  $leftDiff: $leftEnd - $leftStart;
+
+  top: calc($topStart + $topDiff * var(--intersection-ratio));
+  left: calc($leftStart + $leftDiff * var(--intersection-ratio));
+}
