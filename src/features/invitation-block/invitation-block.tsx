@@ -14,10 +14,10 @@ export const InvitationBlock: FC = () => {
         Делитесь своим опытом в программировании, анализе данных, менеджменте,
         маркетинге или дизайне и&nbsp;получайте дополнительный доход
       </Typography.Text>
-      <Button className={styles.button}>Хочу делиться знаниями</Button>
       <div className={styles.imageWrapper}>
         <InvitationBlockImage />
       </div>
+      <Button className={styles.button}>Хочу делиться знаниями</Button>
     </div>
   );
 };

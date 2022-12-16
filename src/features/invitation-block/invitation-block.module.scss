@@ -5,11 +5,12 @@
   height: 700px;
   display: grid;
   grid-template-columns: 692px 1fr;
-  grid-template-rows: max-content max-content 60px;
+  grid-template-rows: max-content;
   justify-content: space-between;
   padding: 150px 0;
 
   @include for-phone {
+    height: auto;
     grid-template-columns: 1fr;
     padding: 0 20px;
   }
@@ -18,22 +19,44 @@
     grid-row-start: 1;
     grid-row-end: 4;
     position: relative;
+
+    @include for-phone {
+      grid-row-start: initial;
+      grid-row-end: initial;
+    }
   }
 
   .title {
     max-width: 692px;
+    @include for-phone {
+      max-width: initial;
+    }
   }
 
   .text {
-    width: 488px;
+    max-width: 488px;
     margin-top: 40px;
     margin-bottom: 80px;
     color: $grey;
     grid-row-start: 2;
+
+    @include for-phone {
+      margin-top: 24px;
+      margin-bottom: 14px;
+      max-width: initial;
+      grid-row-start: initial;
+    }
   }
 
   .button {
     grid-row-start: 3;
+    @include for-phone {
+      grid-row-start: initial;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 26px auto 32px auto;
+    }
   }
 }
 

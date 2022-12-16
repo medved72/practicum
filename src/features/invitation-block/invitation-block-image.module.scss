@@ -8,6 +8,21 @@
   right: 0;
   transform: translateY(-50%);
 
+  @include for-phone {
+    width: min-content;
+    height: initial;
+
+    img {
+      width: calc(100vw);
+      margin: 0 -20px;
+      height: auto;
+    }
+    position: initial;
+    top: initial;
+    right: initial;
+    transform: none;
+  }
+
   .bubble1, .bubble2, .bubble3 {
     position: absolute;
     top: 0;
@@ -16,11 +31,21 @@
 
   .bubble1 {
     @include bubbleAnimate(393px, 462px, 446px, 348px);
+
+    @include for-phone {
+      display: none;
+    }
   }
   .bubble2 {
     @include bubbleAnimate(161px, 135px, 130px, 205px);
+    @include for-phone {
+      display: none;
+    }
   }
   .bubble3 {
     @include bubbleAnimate(37px, 91px, 235px, 157px);
+    @include for-phone {
+      display: none;
+    }
   }
 }
