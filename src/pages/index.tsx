@@ -35,15 +35,15 @@ const Page: FC<PageProps> = ({ vacancies }) => {
       <InvitationBlock />
       <ResponsibilitiesBlock />
       <DirectionsBlock />
-      <Steps />
-      <Roles />
-      <VacancyBlock vacancies={vacancies} />
-      <StoriesBlock />
-      <FaqBlock />
-      <FooterBlock />
-      <ModalPage isOpen={!!vacancyId}>
-        <ResponseToJob vacancy={vacancy} />
-      </ModalPage>
+      {/*<Steps />*/}
+      {/*<Roles />*/}
+      {/*<VacancyBlock vacancies={vacancies} />*/}
+      {/*<StoriesBlock />*/}
+      {/*<FaqBlock />*/}
+      {/*<FooterBlock />*/}
+      {/*<ModalPage isOpen={!!vacancyId}>*/}
+      {/*  <ResponseToJob vacancy={vacancy} />*/}
+      {/*</ModalPage>*/}
     </ContentBlock>
   );
 };

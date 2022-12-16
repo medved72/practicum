@@ -5,6 +5,7 @@ import FacultativeDesignImage from "@shared/assets/images/facultative-design.svg
 import FacultativeDataAnalyzingImage from "@shared/assets/images/facultative-data-analyzing.svg";
 import FacultativeMarketingImage from "@shared/assets/images/facultative-marketing.svg";
 import FacultativeProgrammingImage from "@shared/assets/images/facultative-programming.svg";
+import FacultativeAllCoursesImage from "@shared/assets/images/facultative-all-courses.svg";
 
 import { DirectionCard } from "./direction-card";
 
@@ -43,8 +44,10 @@ export const DirectionsBlock: FC = () => {
           text="Тестирование, фронтенд, бэкенд, DevOps и алгоритмы"
         />
         <DirectionCard
+          previewImage={<FacultativeAllCoursesImage />}
           header="Все курсы"
           text="76 программ для обучения онлайн"
+          hidePreviewOnDesktop={true}
         />
       </div>
     </div>

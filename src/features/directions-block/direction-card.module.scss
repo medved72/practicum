@@ -1,9 +1,22 @@
-@import "../../styles/colors";
+@import "src/styles/colors";
+@import "src/styles/mixins";
 
 .directionCard {
   height: 294px;
   padding: 32px 40px;
 
+  @include for-phone {
+    height: auto;
+    padding: 32px 16px;
+    position: sticky;
+    top: 20px;
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        top: 20 + $i * 10px;
+      }
+    }
+  }
 
   &__front, &__back {
     flex-direction: column;
@@ -21,6 +34,13 @@
 
   &__header {
     padding: 12px 0;
+
+    @include for-phone {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+    }
   }
 
   &__imageWrapper {
@@ -28,15 +48,28 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+
+    @include for-phone {
+
+    }
   }
 
   &__shortDescription {
     flex: 1;
     color: $grey;
+
+    @include for-phone {
+      margin-top: 12px;
+      margin-bottom: 20px;
+    }
   }
 
   &__goToFullDescription {
     align-self: center;
+
+    @include for-phone {
+      height: 100%;
+    }
   }
 }
 
