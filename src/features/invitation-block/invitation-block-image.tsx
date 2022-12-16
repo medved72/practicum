@@ -1,10 +1,11 @@
 import { FC, useEffect, useRef } from "react";
-import styles from "./invitation-block.module.scss";
 import Image from "next/image";
 import InvitationPeoplesPng from "@shared/assets/images/invitation-people.png";
 import InvitationBubbleYellowBigImage from "@shared/assets/images/invitation-bubble-yellow-big.svg";
 import InvitationBubbleYellowSmallImage from "@shared/assets/images/invitation-bubble-yellow-small.svg";
 import InvitationBubbleBlueImage from "@shared/assets/images/invitation-bubble-blue.svg";
+
+import styles from "./invitation-block-image.module.scss";
 
 export const InvitationBlockImage: FC = () => {
   const imageWrapperRef = useRef<HTMLDivElement>(null);
@@ -38,11 +39,11 @@ export const InvitationBlockImage: FC = () => {
   }, []);
 
   return (
-    <div ref={imageWrapperRef} className={styles.imageWrapper}>
-      <Image className={styles.image} src={InvitationPeoplesPng} alt="" />
-      <InvitationBubbleYellowBigImage className={styles.bubbleYellowBig} />
-      <InvitationBubbleYellowSmallImage className={styles.bubbleYellowSmall} />
-      <InvitationBubbleBlueImage className={styles.bubbleBlue} />
+    <div ref={imageWrapperRef} className={styles.invitationBlockImage}>
+      <Image src={InvitationPeoplesPng} alt="" />
+      <InvitationBubbleYellowBigImage className={styles.bubble1} />
+      <InvitationBubbleYellowSmallImage className={styles.bubble2} />
+      <InvitationBubbleBlueImage className={styles.bubble3} />
     </div>
   );
 };

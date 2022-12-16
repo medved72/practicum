@@ -5,3 +5,9 @@
   top: calc($topStart + $topDiff * var(--intersection-ratio));
   left: calc($leftStart + $leftDiff * var(--intersection-ratio));
 }
+
+@mixin for-phone {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}

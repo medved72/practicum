@@ -1,4 +1,12 @@
+@import "src/styles/mixins";
+
 .content {
   margin: 0 auto;
   width: 1200px;
+
+  @include for-phone {
+    overflow: hidden;
+    width: 100vw;
+  }
 }
+

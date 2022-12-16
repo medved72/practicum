@@ -23,7 +23,6 @@ export const RolesImage = (props: {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        console.log({ entry });
         rolesImageRef.current?.style.setProperty(
           "--intersection-ratio",
           entry.intersectionRatio.toString()

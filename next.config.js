@@ -12,15 +12,23 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  trailingSlash: true,
+  trailingSlash: false,
   webpack(config, { isServer }) {
     config.module.rules.push({
       test: /\.svg$/,
       issuer: {
         and: [/\.(js|ts)x?$/],
       },
-
-      use: ["@svgr/webpack"],
+      use: [
+        {
+          loader: "@svgr/webpack",
+          options: {
+            svgoConfig: {
+              plugins: [{ name: "removeViewBox", active: false }],
+            },
+          },
+        },
+      ],
     });
 
     config.module.rules.push({

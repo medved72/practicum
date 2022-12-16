@@ -1,0 +1,26 @@
+@import "src/styles/mixins";
+
+.invitationBlockImage {
+  position: absolute;
+  width: 590px;
+  height: 540px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  .bubble1, .bubble2, .bubble3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .bubble1 {
+    @include bubbleAnimate(393px, 462px, 446px, 348px);
+  }
+  .bubble2 {
+    @include bubbleAnimate(161px, 135px, 130px, 205px);
+  }
+  .bubble3 {
+    @include bubbleAnimate(37px, 91px, 235px, 157px);
+  }
+}
