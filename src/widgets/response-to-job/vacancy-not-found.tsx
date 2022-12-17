@@ -8,9 +8,9 @@ import {
   Typography,
 } from "@shared/components";
 import VacancyNotFoundImage from "@shared/assets/images/vacancy-not-found.png";
+import { RequestSendSuccessfullModal } from "@features/request-send-successfull-modal";
 
 import styles from "./vacancy-not-found.module.scss";
-import { RequestSendSuccessfullModal } from "@features/request-send-successfull-modal";
 
 export const VacancyNotFound: FC = () => {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -57,7 +57,7 @@ export const VacancyNotFound: FC = () => {
         </Typography.Text>
       </div>
       <div className={styles.vacancyNotFound__body}>
-        <Image src={VacancyNotFoundImage} alt={""} />
+        <Image className={styles.image} src={VacancyNotFoundImage} alt={""} />
         <form
           ref={formRef}
           className={styles.vacancyNotFound__form}
