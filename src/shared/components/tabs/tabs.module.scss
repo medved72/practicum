@@ -16,9 +16,7 @@
   }
 
   &__tabButton {
-    @include for-phone {
-     flex: 1;
-    }
+
     composes: text-s from '../typography/text.module.scss';
     line-height: 24px;
     height: 36px;
@@ -32,6 +30,11 @@
     cursor: pointer;
     transition: all .15s ease;
     white-space: nowrap;
+
+    @include for-phone {
+      line-height: 20px;
+      flex: 1;
+    }
 
     input {
       width: 0;

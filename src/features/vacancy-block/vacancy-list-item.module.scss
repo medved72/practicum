@@ -1,13 +1,46 @@
+@import "src/styles/mixins";
+
 .vacancyListItem {
   padding: 28px 0;
   display: flex;
   justify-content: space-between;
   min-height: 138px;
 
+  @include for-phone {
+    margin: 12px 0;
+    padding: 20px 16px;
+    justify-content: initial;
+    min-height: auto;
+    flex-direction: column;
+
+    background: white;
+    border-radius: 15px;
+
+    gap: 18px;
+  }
+
+  &__prefix, &__name {
+    @include for-phone {
+      font-size: 18px;
+      line-height: 23px;
+    }
+  }
+
   &__description {
+    @include for-phone {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+
+  &__descriptionBlock {
     display: flex;
     gap: 16px;
     flex-direction: column;
+
+    @include for-phone {
+      gap: 12px;
+    }
   }
 
   &__detailsButton {
@@ -19,5 +52,15 @@
     align-items: center;
     height: 60px;
     width: 285px;
+
+    @include for-phone {
+      width: min-content;
+      height: 40px;
+      padding: 9.5px 59px;
+      align-self: flex-start;
+      justify-self: flex-start;
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
 }

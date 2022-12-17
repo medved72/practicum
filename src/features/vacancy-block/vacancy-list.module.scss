@@ -1,3 +1,9 @@
+@import "src/styles/mixins";
+
 .vacancyList {
   margin-top: 80px;
+
+  @include for-phone {
+    margin-top: 40px;
+  }
 }
