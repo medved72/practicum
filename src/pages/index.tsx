@@ -40,7 +40,7 @@ const Page: FC<PageProps> = ({ vacancies }) => {
       <VacancyBlock vacancies={vacancies} />
       <StoriesBlock />
       <FaqBlock />
-      {/*<FooterBlock />*/}
+      <FooterBlock />
       <ModalPage isOpen={!!vacancyId}>
         <ResponseToJob vacancy={vacancy} />
       </ModalPage>
