@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react";
+import { FC, useEffect, useRef } from "react";
 import Image from "next/image";
 import RolesPeopleMentorImage from "@shared/assets/images/roles-peoples-mentor.png";
 import RolesPeopleReviewerImage from "@shared/assets/images/roles-peoples-reviewer.png";
-import { Role } from "./utils";
+import RolesPeopleMobileImage from "@shared/assets/images/roles-peoples-mobile.png";
 
 import BubbleOneMentorImage from "@shared/assets/images/bubble-one-mentor.svg";
 import BubbleTwoMentorImage from "@shared/assets/images/bubble-two-mentor.svg";
@@ -12,12 +12,25 @@ import BubbleOneReviewerImage from "@shared/assets/images/bubble-one-reviewer.sv
 import BubbleTwoReviewerImage from "@shared/assets/images/bubble-two-reviewer.svg";
 import BubbleThreeReviewerImage from "@shared/assets/images/bubble-three-reviewer.svg";
 
-import styles from "./roles-image.module.scss";
 import { cn } from "@shared/utils";
+import { Role } from "./utils";
 
-export const RolesImage = (props: {
-  activeTab: Role.mentor | Role.reviewer;
-}) => {
+import styles from "./roles-image.module.scss";
+import { useIsMobile } from "@shared/hooks";
+
+const RolesImageMobile: FC = () => {
+  return (
+    <Image
+      className={styles.rolesImage}
+      src={RolesPeopleMobileImage}
+      alt={""}
+    />
+  );
+};
+
+export const RolesImageDesktop: FC<{
+  activeTab: Role;
+}> = (props) => {
   const rolesImageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -86,4 +99,16 @@ export const RolesImage = (props: {
       )}
     </div>
   );
+};
+
+export const RolesImage: FC<{
+  activeTab: Role;
+}> = ({ activeTab }) => {
+  const isMobile = useIsMobile();
+
+  if (isMobile) {
+    return <RolesImageMobile />;
+  }
+
+  return <RolesImageDesktop activeTab={activeTab} />;
 };

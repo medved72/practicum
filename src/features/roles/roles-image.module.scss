@@ -4,6 +4,12 @@
   position: relative;
   height: 573px;
 
+  @include for-phone {
+    margin-top: 20px;
+    height: auto;
+  }
+
+
   .bubble1, .bubble2, .bubble3 {
     position: absolute;
   }
