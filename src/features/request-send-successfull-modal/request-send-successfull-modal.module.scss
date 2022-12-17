@@ -1,3 +1,5 @@
+@import "src/styles/mixins";
+
 .requestSendSuccessfullModal {
   position: absolute;
   top: 50%;
@@ -13,8 +15,24 @@
   display: grid;
   justify-items: center;
 
+  @include for-phone {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: none;
+    width: max(100vw, 100%);
+    min-height: max(100vh, 100%);
+    padding: 0 20px;
+    align-content: center;
+  }
+
+
+
   &__title {
     margin-top: 20px;
+    @include for-phone {
+      margin-top: 40px;
+    }
   }
 
   &__text {
@@ -26,6 +44,10 @@
     justify-content: center;
     margin-top: 80px;
     width: 285px;
+    @include for-phone {
+      width: 100%;
+      margin-top: 120px;
+    }
   }
 }
 

@@ -1,10 +1,15 @@
-@import "../../styles/colors";
+@import "src/styles/colors";
+@import "src/styles/mixins";
 
 .storiesCard {
   width: 488px;
   height: 100%;
   background: white;
   border-radius: 15px;
+
+  @include for-phone {
+    width: calc(var(--max-content-width) - 40px);
+  }
 
   .video {
     position: relative;
@@ -68,10 +73,21 @@
 
   .header {
     margin-bottom: 4px;
+
+    @include for-phone {
+      margin-bottom: 2px;
+      font-size: 24px;
+      line-height: 31px;
+    }
   }
 
   .position {
     color: $grey;
     margin-bottom: 16px;
+
+    @include for-phone {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 }

@@ -1,15 +1,26 @@
 @import "src/styles/colors";
+@import "src/styles/mixins";
 
 .modalPageContent {
   &__body {
     padding: 80px 0;
     background: $background;
     min-height: max(100vh, 100%);
+
+    @include for-phone {
+      padding: 40px 0 0 0;
+    }
   }
 
   &__close {
     display: flex;
     justify-content: flex-end;
+
+    @include for-phone {
+      svg {
+        height: 32px;
+      }
+    }
   }
 
   &__backdrop {

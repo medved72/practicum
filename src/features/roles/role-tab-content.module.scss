@@ -1,5 +1,17 @@
+@import "src/styles/mixins";
+
 .roleTabContent {
   margin-top: 80px;
+
+  @include for-phone {
+    margin-top: 40px;
+  }
+
+  &__grid {
+    @include for-phone {
+      gap: 16px;
+    }
+  }
 
   &__card {
     display: grid;
@@ -7,5 +19,12 @@
     justify-content: center;
     align-items: center;
     padding: 20px 32px;
+
+    @include for-phone {
+      justify-content: flex-start;
+      align-items: flex-start;
+      min-height: auto;
+      padding: 24px 16px;
+    }
   }
 }

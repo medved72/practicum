@@ -1,3 +1,5 @@
+@import "src/styles/mixins";
+
 .card-header {
   font-family: 'YS Text';
   font-style: normal;
@@ -9,6 +11,11 @@
 .card-header-l {
   font-size: 32px;
   line-height: 42px;
+
+  @include for-phone {
+    font-size: 24px;
+    line-height: 31px;
+  }
 }
 
 .card-header-s {

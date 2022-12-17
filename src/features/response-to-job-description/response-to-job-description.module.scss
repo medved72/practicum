@@ -1,14 +1,28 @@
+@import "src/styles/mixins";
+
 .responseToJobDescription {
   display: grid;
   gap: 80px;
 
+  @include for-phone {
+    gap: 40px;
+  }
+
   .section {
     display: grid;
     gap: 40px;
+
+    @include for-phone {
+      gap: 24px;
+    }
   }
 
   .skills {
     display: grid;
     gap: 20px;
+
+    @include for-phone {
+      gap: 12px;
+    }
   }
 }

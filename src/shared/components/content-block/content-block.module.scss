@@ -1,4 +1,13 @@
+@import "src/styles/mixins";
+
 .content {
   margin: 0 auto;
-  width: 1200px;
+  width: var(--max-content-width);
+}
+
+@media only screen and (min-width: $mobile-breakpoint) and (max-width: 1220px)  {
+  .content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }

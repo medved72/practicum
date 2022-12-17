@@ -1,4 +1,5 @@
-@import "../../styles/colors";
+@import "src/styles/colors";
+@import "src/styles/mixins";
 
 .nessiCard {
   position: relative;
@@ -10,8 +11,17 @@
   gap: 48px;
   padding: 32px 0;
 
+  @include for-phone {
+    padding: 166px 41px 32px 41px;
+    margin-top: 40px;
+  }
+
   &__header {
     width: 884px;
+    @include for-phone {
+      width: auto;
+      text-align: initial;
+    }
   }
 
   &__nessiLeft, &__nessiRight {
@@ -26,24 +36,44 @@
   &__nessiLeft {
     position: absolute;
     left: 0;
+
+    @include for-phone {
+      top: 3px;
+      left: -20px;
+    }
   }
 
   &__nessiRight {
     position: absolute;
     right: 0;
     transform: scaleX(-1);
+
+    @include for-phone {
+      transform: none;
+      right: -20px;
+      top: 3px;
+    }
   }
 
   &__button {
     display: flex;
     justify-content: center;
     width: 285px;
+
+    @include for-phone {
+      width: 100%;
+      font-size: 16px;
+    }
   }
 
   &:hover {
     .nessiCard__nessiLeft, .nessiCard__nessiRight {
       svg {
         fill: $yellow;
+
+        @include for-phone {
+          fill: none;
+        }
       }
     }
   }

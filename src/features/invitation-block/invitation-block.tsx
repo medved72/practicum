@@ -7,17 +7,17 @@ import styles from "./invitation-block.module.scss";
 export const InvitationBlock: FC = () => {
   return (
     <div className={styles.invitationBlock}>
-      <div className={styles.message}>
-        <Typography.Header level={1} className={styles.title}>
-          Станьте наставником или ревьюером
-        </Typography.Header>
-        <Typography.Text className={styles.text} size={"s"}>
-          Делитесь своим опытом в программировании, анализе данных, менеджменте,
-          маркетинге или дизайне и&nbsp;получайте дополнительный доход
-        </Typography.Text>
-        <Button>Хочу делиться знаниями</Button>
+      <Typography.Header level={1} className={styles.title}>
+        Станьте наставником или ревьюером
+      </Typography.Header>
+      <Typography.Text className={styles.text} size={"s"}>
+        Делитесь своим опытом в программировании, анализе данных, менеджменте,
+        маркетинге или дизайне и&nbsp;получайте дополнительный доход
+      </Typography.Text>
+      <div className={styles.imageWrapper}>
+        <InvitationBlockImage />
       </div>
-      <InvitationBlockImage />
+      <Button className={styles.button}>Хочу делиться знаниями</Button>
     </div>
   );
 };

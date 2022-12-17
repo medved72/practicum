@@ -1,4 +1,4 @@
-import { ComponentProps, FC, useRef } from "react";
+import { ComponentProps, FC, useMemo, useRef } from "react";
 import Slider from "react-slick";
 import { Typography } from "@shared/components";
 import BackwardImage from "@shared/assets/images/backward.svg";
@@ -8,15 +8,28 @@ import { StoriesCard } from "./stories-card";
 import { stories } from "./stories-block.data";
 
 import styles from "./stories-block.module.scss";
+import { useIsMobile } from "@shared/hooks";
 
-const settings: ComponentProps<typeof Slider> = {
+const desktopSettings: ComponentProps<typeof Slider> = {
   speed: 300,
   slidesToShow: 2,
   variableWidth: true,
   dots: false,
 };
 
+const mobileSettings: ComponentProps<typeof Slider> = {
+  speed: 300,
+  slidesToShow: 1,
+  variableWidth: false,
+  dots: true,
+};
+
 export const StoriesBlock: FC = () => {
+  const isMobile = useIsMobile();
+  const settings = useMemo(
+    () => (isMobile ? mobileSettings : desktopSettings),
+    [isMobile]
+  );
   const sliderRef = useRef<Slider>(null);
 
   return (

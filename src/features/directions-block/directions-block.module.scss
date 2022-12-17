@@ -1,8 +1,18 @@
+@import "src/styles/mixins";
+
 .directionsBlock {
   padding: 80px 0;
 
+  @include for-phone {
+    padding: 32px 20px;
+  }
+
   &__header {
     width: 527px;
+
+    @include for-phone {
+      width: calc(var(--max-content-width) - 40px);
+    }
   }
 
   &__cards {
@@ -10,5 +20,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     margin-top: 80px;
+
+    @include for-phone {
+      margin-top: 40px;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
   }
 }

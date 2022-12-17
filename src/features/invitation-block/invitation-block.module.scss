@@ -1,57 +1,63 @@
-@import "../../styles/colors";
+@import "src/styles/colors";
+@import "src/styles/mixins";
 
 .invitationBlock {
+  height: 700px;
   display: grid;
-  grid-template-columns: max-content min-content;
+  grid-template-columns: 692px 1fr;
+  grid-template-rows: max-content;
   justify-content: space-between;
-  padding: 80px 0;
-}
+  padding: 150px 0;
 
-.message {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-}
-
-.imageWrapper {
-  height: 540px;
-  width: 1px;
-  position: relative;
-
-  .image {
-    position: absolute;
-    right: 0;
+  @include for-phone {
+    height: auto;
+    grid-template-columns: 1fr;
+    padding: 0 20px;
   }
 
-  .bubbleBlue, .bubbleYellowSmall, .bubbleYellowBig {
-    position: absolute;
+  .imageWrapper {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    position: relative;
+
+    @include for-phone {
+      grid-row-start: initial;
+      grid-row-end: initial;
+    }
   }
 
-  .bubbleBlue {
-    top: calc(37px + 57px * var(--intersection-ratio));
-    right: calc(334px + 60px * var(--intersection-ratio));
+  .title {
+    max-width: 692px;
+
+    @include for-phone {
+      max-width: var(--max-content-width);
+    }
   }
 
-  .bubbleYellowSmall {
-    top: calc(171px - 37px * var(--intersection-ratio));
-    right: calc(481px - 112px * var(--intersection-ratio));
+  .text {
+    max-width: 488px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    color: $grey;
+    grid-row-start: 2;
+
+    @include for-phone {
+      margin-top: 24px;
+      margin-bottom: 14px;
+      max-width: var(--max-content-width);
+      grid-row-start: initial;
+    }
   }
 
-  .bubbleYellowBig {
-    top: calc(430px + 35px * var(--intersection-ratio));
-    right: calc(114px + 95px * var(--intersection-ratio));
+  .button {
+    grid-row-start: 3;
+    @include for-phone {
+      grid-row-start: initial;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 26px auto 32px auto;
+    }
   }
 }
 
-
-
-.title {
-  width: 692px;
-}
-
-.text {
-  width: 488px;
-  margin-top: 40px;
-  margin-bottom: 80px;
-  color: $grey;
-}

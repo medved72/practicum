@@ -1,10 +1,15 @@
-@import "../../../styles/colors";
+@import "src/styles/colors";
+@import "src/styles/mixins";
 
 .field {
   display: block;
   position: relative;
   padding: 11px 0;
   height: 86px;
+
+  @include for-phone {
+    height: 80px;
+  }
 
   .placeholder {
     position: absolute;
@@ -19,6 +24,12 @@
     color: $grey;
     cursor: text;
     pointer-events: none;
+
+    @include for-phone {
+      top: 28px;
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
 
   .input {
@@ -35,16 +46,30 @@
     line-height: 31px;
     padding: 10px 0;
 
+    @include for-phone {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
     &:not(:placeholder-shown) ~ .placeholder {
       top: 0;
       font-size: 18px;
       line-height: 23px;
+
+      @include for-phone {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
 
     &:focus ~ .placeholder {
       top: 0;
       font-size: 18px;
       line-height: 23px;
+      @include for-phone {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
 
     &::placeholder {

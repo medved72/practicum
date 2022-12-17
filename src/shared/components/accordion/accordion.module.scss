@@ -1,3 +1,5 @@
+@import "src/styles/mixins";
+
 .accordion {
   .item {
     .label {
@@ -9,17 +11,42 @@
       padding: 28px 0;
       height: 138px;
 
+      @include for-phone {
+        padding: 11px 0;
+        height: auto;
+      }
+
       .crossIcon {
         width: 82px;
         height: 82px;
         border-radius: 50%;
         transition: transform .3s, background .1s;
 
+        @include for-phone {
+          width: 32px;
+          height: 32px;
+        }
+
         &:hover {
           background: #151617;
 
           svg {
             fill: white
+          }
+        }
+
+        @include for-phone {
+          svg {
+            height: 32px;
+            width: 32px;
+          }
+
+          &:hover {
+            background: transparent;
+
+            svg {
+              fill: black;
+            }
           }
         }
       }

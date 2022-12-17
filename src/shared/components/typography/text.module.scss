@@ -1,4 +1,5 @@
-@import "../../../styles/colors";
+@import "src/styles/colors";
+@import "src/styles/mixins";
 
 .text {
   font-family: 'YS Text';
@@ -10,11 +11,21 @@
 .text-l {
   font-size: 24px;
   line-height: 31px;
+
+  @include for-phone {
+    font-size: 16px;
+    line-height: 21px;
+  }
 }
 
 .text-s {
   font-size: 18px;
   line-height: 23px;
+
+  @include for-phone {
+    font-size: 16px;
+    line-height: 21px;
+  }
 }
 
 .text-supportive {
