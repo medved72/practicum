@@ -19,7 +19,6 @@ import {
 } from "@shared/api";
 import { useRouter } from "next/router";
 import { ResponseToJob } from "@widgets/response-to-job";
-import Head from "next/head";
 
 interface PageProps {
   vacancies: VacancyBlockProps["vacancies"];
@@ -31,27 +30,21 @@ const Page: FC<PageProps> = ({ vacancies }) => {
   const vacancy = useVacancy(vacancyId);
 
   return (
-    <>
-      <Head>
-        <title>Я.Практикум</title>
-        <link rel="shortcut icon" href="favicon.ico" />
-      </Head>
-      <ContentBlock>
-        <Header />
-        <InvitationBlock />
-        <ResponsibilitiesBlock />
-        <DirectionsBlock />
-        <Steps />
-        <Roles />
-        <VacancyBlock vacancies={vacancies} />
-        <StoriesBlock />
-        <FaqBlock />
-        <FooterBlock />
-        <ModalPage isOpen={!!vacancyId}>
-          <ResponseToJob vacancy={vacancy} />
-        </ModalPage>
-      </ContentBlock>
-    </>
+    <ContentBlock>
+      <Header />
+      <InvitationBlock />
+      <ResponsibilitiesBlock />
+      <DirectionsBlock />
+      <Steps />
+      <Roles />
+      <VacancyBlock vacancies={vacancies} />
+      <StoriesBlock />
+      <FaqBlock />
+      <FooterBlock />
+      <ModalPage isOpen={!!vacancyId}>
+        <ResponseToJob vacancy={vacancy} />
+      </ModalPage>
+    </ContentBlock>
   );
 };
 

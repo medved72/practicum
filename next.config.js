@@ -5,6 +5,7 @@ const basePath = isProd ? "/practicum" : "";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  env: { basePath },
   assetPrefix,
   basePath,
   reactStrictMode: true,
