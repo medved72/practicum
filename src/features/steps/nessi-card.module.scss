@@ -10,48 +10,65 @@
   text-align: center;
   gap: 48px;
   padding: 32px 0;
+  background: white;
+  border-radius: 15px;
+
+  @include for-phone {
+    background: transparent;
+    padding: 32px 20px;
+  }
+
+  &:before {
+    content: "";
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: url("../../shared/assets/images/steps-nessi.svg") center no-repeat;
+    width: 183px;
+    height: 192px;
+
+    @include for-phone {
+      bottom: initial;
+      width: 188px;
+      height: 350px;
+      top: 0;
+      left: -20px;
+      background: url("../../shared/assets/images/nessi-mobile-left.svg");
+    }
+  }
+
+  &:after {
+    content: "";
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: url("../../shared/assets/images/steps-nessi.svg") center no-repeat;
+    transform: scaleX(-1);
+    width: 183px;
+    height: 192px;
+    @include for-phone {
+      width: 180px;
+      height: 147px;
+      transform: none;
+      top: 3px;
+      right: -20px;
+      bottom: initial;
+      background: url("../../shared/assets/images/nessi-mobile-right.svg");
+    }
+  }
 
   @include for-phone {
     padding: 166px 41px 32px 41px;
     margin-top: 40px;
+    height: 430px;
   }
 
   &__header {
     width: 884px;
+
     @include for-phone {
       width: auto;
       text-align: initial;
-    }
-  }
-
-  &__nessiLeft, &__nessiRight {
-    height: 192px;
-    bottom: 0;
-
-    svg {
-      transition: fill .1s;
-    }
-  }
-
-  &__nessiLeft {
-    position: absolute;
-    left: 0;
-
-    @include for-phone {
-      top: 3px;
-      left: -20px;
-    }
-  }
-
-  &__nessiRight {
-    position: absolute;
-    right: 0;
-    transform: scaleX(-1);
-
-    @include for-phone {
-      transform: none;
-      right: -20px;
-      top: 3px;
     }
   }
 
@@ -63,18 +80,6 @@
     @include for-phone {
       width: 100%;
       font-size: 16px;
-    }
-  }
-
-  &:hover {
-    .nessiCard__nessiLeft, .nessiCard__nessiRight {
-      svg {
-        fill: $yellow;
-
-        @include for-phone {
-          fill: none;
-        }
-      }
     }
   }
 }

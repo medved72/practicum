@@ -15,17 +15,6 @@
     padding: 0 20px;
   }
 
-  .imageWrapper {
-    grid-row-start: 1;
-    grid-row-end: 4;
-    position: relative;
-
-    @include for-phone {
-      grid-row-start: initial;
-      grid-row-end: initial;
-    }
-  }
-
   .title {
     max-width: 692px;
 
@@ -57,6 +46,17 @@
       justify-content: center;
       width: 100%;
       margin: 26px auto 32px auto;
+    }
+  }
+
+  .imageWrapper {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    position: relative;
+
+    @include for-phone {
+      grid-row-start: initial;
+      grid-row-end: initial;
     }
   }
 }

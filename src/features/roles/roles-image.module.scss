@@ -5,13 +5,18 @@
   height: 573px;
 
   @include for-phone {
-    margin-top: 20px;
     height: auto;
+    margin-top: 20px;
+    img{
+      max-width: 100%;
+      height: 100%;
+    }
   }
 
 
   .bubble1, .bubble2, .bubble3 {
     position: absolute;
+    @include for-phone { display: none };
   }
 
   .reviewer {

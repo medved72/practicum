@@ -1,6 +1,12 @@
+@import "src/styles/mixins";
+
 .smallCard {
   padding: 34px 28px;
   min-height: 302px;
+
+  @include for-phone {
+    min-height: auto;
+  }
 
   &__text {
     margin-top: 24px;

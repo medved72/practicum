@@ -1,27 +1,21 @@
-import { FC, useEffect, useMemo, useRef } from "react";
+import { FC, useEffect, useRef } from "react";
 import Image from "next/image";
 import InvitationPeoplesPng from "@shared/assets/images/invitation-people.png";
 import InvitationPeoplesMobilePng from "@shared/assets/images/invitation-people-mobile.png";
 import InvitationBubbleYellowBigImage from "@shared/assets/images/invitation-bubble-yellow-big.svg";
 import InvitationBubbleYellowSmallImage from "@shared/assets/images/invitation-bubble-yellow-small.svg";
 import InvitationBubbleBlueImage from "@shared/assets/images/invitation-bubble-blue.svg";
-import { useIsMobile } from "@shared/hooks";
 
 import styles from "./invitation-block-image.module.scss";
 
 export const InvitationBlockImage: FC = () => {
-  const isMobile = useIsMobile();
-
-  const mainImage = useMemo(() => {
-    return isMobile ? InvitationPeoplesMobilePng : InvitationPeoplesPng;
-  }, [isMobile]);
-
   const imageWrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const wrapper = imageWrapperRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        imageWrapperRef.current?.style.setProperty(
+        wrapper?.style.setProperty(
           "--intersection-ratio",
           entry.intersectionRatio.toString()
         );
@@ -35,20 +29,26 @@ export const InvitationBlockImage: FC = () => {
       }
     );
 
-    if (imageWrapperRef.current) {
-      observer.observe(imageWrapperRef.current);
+    if (wrapper) {
+      observer.observe(wrapper);
     }
 
     return () => {
-      if (imageWrapperRef.current) {
-        observer.unobserve(imageWrapperRef.current);
+      if (wrapper) {
+        observer.unobserve(wrapper);
       }
     };
   }, []);
 
   return (
     <div ref={imageWrapperRef} className={styles.invitationBlockImage}>
-      <Image src={mainImage} alt="" />
+      <picture>
+        <source
+          media="(max-width: 980px)"
+          srcSet={InvitationPeoplesMobilePng.src}
+        />
+        <Image src={InvitationPeoplesPng} alt="" />
+      </picture>
       <InvitationBubbleYellowBigImage className={styles.bubble1} />
       <InvitationBubbleYellowSmallImage className={styles.bubble2} />
       <InvitationBubbleBlueImage className={styles.bubble3} />

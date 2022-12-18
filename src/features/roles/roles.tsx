@@ -2,9 +2,9 @@ import { FC, useState } from "react";
 import RolesArrowImage from "@shared/assets/images/roles-arrow.svg";
 import { Tabs, Typography } from "@shared/components";
 import { makeRolesTabsMap, Role } from "./utils";
+import { RolesImage } from "@features/roles/roles-image";
 
 import styles from "./roles.module.scss";
-import { RolesImage } from "@features/roles/roles-image";
 
 export const tabs = makeRolesTabsMap([Role.mentor, Role.reviewer]);
 

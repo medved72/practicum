@@ -16,17 +16,6 @@ import { cn } from "@shared/utils";
 import { Role } from "./utils";
 
 import styles from "./roles-image.module.scss";
-import { useIsMobile } from "@shared/hooks";
-
-const RolesImageMobile: FC = () => {
-  return (
-    <Image
-      className={styles.rolesImage}
-      src={RolesPeopleMobileImage}
-      alt={""}
-    />
-  );
-};
 
 export const RolesImageDesktop: FC<{
   activeTab: Role;
@@ -34,9 +23,10 @@ export const RolesImageDesktop: FC<{
   const rolesImageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const wrapper = rolesImageRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        rolesImageRef.current?.style.setProperty(
+        wrapper?.style.setProperty(
           "--intersection-ratio",
           entry.intersectionRatio.toString()
         );
@@ -49,13 +39,13 @@ export const RolesImageDesktop: FC<{
       }
     );
 
-    if (rolesImageRef.current) {
+    if (wrapper) {
       observer.observe(rolesImageRef.current);
     }
 
     return () => {
-      if (rolesImageRef.current) {
-        observer.unobserve(rolesImageRef.current);
+      if (wrapper) {
+        observer.unobserve(wrapper);
       }
     };
   }, []);
@@ -63,11 +53,23 @@ export const RolesImageDesktop: FC<{
   return (
     <div ref={rolesImageRef} className={styles.rolesImage}>
       {props.activeTab === Role.mentor && (
-        <Image src={RolesPeopleMentorImage} alt="" />
+        <picture>
+          <source
+            media="(max-width: 980px)"
+            srcSet={RolesPeopleMobileImage.src}
+          />
+          <Image src={RolesPeopleMentorImage} alt="" />
+        </picture>
       )}
 
       {props.activeTab === Role.reviewer && (
-        <Image src={RolesPeopleReviewerImage} alt="" />
+        <picture>
+          <source
+            media="(max-width: 980px)"
+            srcSet={RolesPeopleMobileImage.src}
+          />
+          <Image src={RolesPeopleReviewerImage} alt="" />
+        </picture>
       )}
 
       {props.activeTab === Role.mentor && (
@@ -104,11 +106,5 @@ export const RolesImageDesktop: FC<{
 export const RolesImage: FC<{
   activeTab: Role;
 }> = ({ activeTab }) => {
-  const isMobile = useIsMobile();
-
-  if (isMobile) {
-    return <RolesImageMobile />;
-  }
-
   return <RolesImageDesktop activeTab={activeTab} />;
 };
