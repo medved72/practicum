@@ -1,21 +1,43 @@
+@import "src/styles/mixins";
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
+
+  @include for-phone {
+    grid-template-columns: 1fr;
+  }
 }
 
 .grid-1 {
   grid-column: span 1;
+
+  @include for-phone {
+    grid-column: span 1;
+  }
 }
 
 .grid-2 {
   grid-column: span 2;
+
+  @include for-phone {
+    grid-column: span 1;
+  }
 }
 
 .grid-3 {
   grid-column: span 3;
+
+  @include for-phone {
+    grid-column: span 1;
+  }
 }
 
 .grid-4 {
   grid-column: span 4;
+
+  @include for-phone {
+    grid-column: span 1;
+  }
 }

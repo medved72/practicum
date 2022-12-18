@@ -12,6 +12,8 @@
 
     @include for-phone {
       width: calc(var(--max-content-width) - 40px);
+      position: sticky;
+      top: 40px;
     }
   }
 
