@@ -2,13 +2,22 @@ import { FC } from "react";
 import { ResponseToJob } from "@widgets/response-to-job";
 import { getVacancies, getVacancyById, VacancyDto } from "@shared/api";
 import { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
 
 interface PageProps {
   vacancy: VacancyDto | null;
 }
 
 const Page: FC<PageProps> = ({ vacancy }) => {
-  return <ResponseToJob vacancy={vacancy} />;
+  return (
+    <>
+      <Head>
+        <title>Я.Практикум</title>
+        <link rel="shortcut icon" href="favicon.ico" />
+      </Head>
+      <ResponseToJob vacancy={vacancy} />
+    </>
+  );
 };
 
 export default Page;
