@@ -9,13 +9,7 @@
     height: auto;
     padding: 32px 16px;
     position: sticky;
-    top: 20px;
-
-    @for $i from 1 through 10 {
-      &:nth-child(#{$i}) {
-        top: 120 + $i * 10px;
-      }
-    }
+    top: 150px;
   }
 
   &__front, &__back {

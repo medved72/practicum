@@ -10,7 +10,7 @@
 
   @include for-phone {
     width: min-content;
-    height: initial;
+    height: 375px;
 
     img {
       width: var(--max-content-width);

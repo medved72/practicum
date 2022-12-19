@@ -24,11 +24,12 @@
   }
 
   &__text {
-    margin-top: 12px;
+    margin-top: 24px;
     width: 356px;
     color: $grey;
 
     @include for-phone {
+      margin-top: 24px;
       width: calc(var(--max-content-width) - 96px);
     }
   }

@@ -32,7 +32,7 @@
 
     @include for-phone {
       margin-top: 24px;
-      margin-bottom: 14px;
+      margin-bottom: 24px;
       max-width: var(--max-content-width);
       grid-row-start: initial;
     }
@@ -45,7 +45,7 @@
       display: flex;
       justify-content: center;
       width: 100%;
-      margin: 26px auto 32px auto;
+      margin: 45px auto 32px auto;
     }
   }
 

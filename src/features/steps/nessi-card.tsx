@@ -6,7 +6,7 @@ export const NessiCard: FC = () => {
   return (
     <div className={styles.nessiCard}>
       <Typography.Header className={styles.nessiCard__header} level={3}>
-        Станьте частью команды Практикума и вдохновляйте своих первых студентов
+        Станьте частью команды и вдохновляйте своих первых студентов
       </Typography.Header>
       <Button className={styles.nessiCard__button} disabledHover>
         Стать частью команды
