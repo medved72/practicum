@@ -8,6 +8,13 @@
   grid-template-rows: min-content min-content;
   align-items: center;
 
+  @include for-phone {
+    grid-template-columns: 1fr;
+    grid-template-rows: initial;
+    padding: 32px 20px;
+    gap: 40px;
+  }
+
   ul {
     list-style: none;
   }
@@ -16,11 +23,21 @@
     grid-column-start: 1;
     grid-row-start: 1;
 
+    @include for-phone {
+      grid-column-start: initial;
+      grid-row-start: initial;
+    }
+
     .logo {
       font-size: 0;
       svg {
         width: 163px;
         height: 28px;
+
+        @include for-phone {
+          width: 120px;
+          height: 20px;
+        }
       }
     }
 
@@ -29,10 +46,23 @@
       font-size: 26px;
       line-height: 34px;
       margin-top: 24px;
+
+      @include for-phone {
+        margin-top: 16px;
+        font-size: 22px;
+        line-height: 32px;
+      }
     }
 
     .free {
       margin-top: 8px;
+
+      @include for-phone {
+        margin-top: 0;
+
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
   }
 
@@ -42,6 +72,12 @@
     margin-top: 24px;
     display: grid;
     gap: 16px;
+
+    @include for-phone {
+      grid-column-start: initial;
+      grid-row-start: initial;
+      margin-top: 4px;
+    }
 
     .head {
       line-height: 22px;
@@ -53,21 +89,40 @@
       justify-content: flex-start;
       align-items: center;
       gap: 12px;
+
+      @include for-phone {
+        gap: 20px;
+      }
     }
   }
 
   .aboutUs, .joinUs {
     height: 258px;
 
+    @include for-phone {
+      height: initial;
+    }
+
     .list {
       display: grid;
       gap: 8px;
       margin-top: 24px;
 
+
+
       a {
         font-weight: 400;
         font-size: 18px;
         line-height: 130%;
+
+        @include for-phone {
+          font-size: 16px;
+          line-height: 21px;
+        }
+      }
+
+      &:nth-of-type(1) li:nth-child(5) {
+        display: none;
       }
     }
   }
@@ -77,11 +132,23 @@
     grid-row-end: 3;
     justify-self: flex-end;
     margin-right: 120px;
+
+    @include for-phone {
+      grid-row-start: 2;
+      grid-row-end: initial;
+      justify-self: initial;
+      margin-right: 0;
+    }
   }
 
   .joinUs {
     grid-row-start: 1;
     grid-row-end: 3;
+
+    @include for-phone {
+      grid-row-start: 3;
+      grid-row-end: initial;
+    }
   }
 
   .text_gray {
