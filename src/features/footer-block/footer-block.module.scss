@@ -2,74 +2,89 @@
 @import "src/styles/mixins";
 
 .footerBlock {
+  display: grid;
   padding: 60px 0;
-  display: flex;
+  grid-template-columns: 488px 1fr max-content;
+  grid-template-rows: min-content min-content;
   align-items: center;
-  gap: 211px;
-
-  @include for-phone {
-    display: grid;
-    padding: 32px 20px;
-    gap: 0;
-  }
-
-  .logo  {
-    width: 163px;
-    height: 28px;
-    margin-bottom: 24px;
-  }
-
-  .phone {
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 130%;
-    margin-bottom: 8px;
-  }
-
-  .callFree {
-    margin-bottom: 24px;
-  }
-
-  .links {
-    display: flex;
-    min-height: 266px;
-    gap: 93px;
-  }
 
   ul {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
     list-style: none;
   }
 
-  .info {
-    flex-basis: 488px;
+  .call {
+    grid-column-start: 1;
+    grid-row-start: 1;
+
+    .logo {
+      font-size: 0;
+      svg {
+        width: 163px;
+        height: 28px;
+      }
+    }
+
+    .phone {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 34px;
+      margin-top: 24px;
+    }
+
+    .free {
+      margin-top: 8px;
+    }
   }
 
-  .textGrey {
-    color: $grey;
-    opacity: 0.5;
-    mix-blend-mode: normal;
+  .journal {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    margin-top: 24px;
+    display: grid;
+    gap: 16px;
+
+    .head {
+      line-height: 22px;
+    }
+
+    .row {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 12px;
+    }
   }
 
-  .social {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    margin-bottom: 16px;
+  .aboutUs, .joinUs {
+    height: 258px;
+
+    .list {
+      display: grid;
+      gap: 8px;
+      margin-top: 24px;
+
+      a {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+      }
+    }
   }
 
-  .socialIcons {
-    height: 36px;
+  .aboutUs {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    justify-self: flex-end;
+    margin-right: 120px;
   }
 
-  .paragraph {
-    margin-bottom: 16px;
+  .joinUs {
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
 
-  .sectionTitle {
-    height: 24px;
-    margin-bottom: 24px;
+  .text_gray {
+    color: rgba(0, 0, 0, .5);
   }
 }

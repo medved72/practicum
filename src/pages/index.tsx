@@ -30,21 +30,23 @@ const Page: FC<PageProps> = ({ vacancies }) => {
   const vacancy = useVacancy(vacancyId);
 
   return (
-    <ContentBlock>
-      <Header />
-      <InvitationBlock />
-      <ResponsibilitiesBlock />
-      <DirectionsBlock />
-      <Steps />
-      <Roles />
-      <VacancyBlock vacancies={vacancies} />
-      <StoriesBlock />
-      <FaqBlock />
-      <FooterBlock />
+    <>
+      <ContentBlock>
+        <Header />
+        <InvitationBlock />
+        <ResponsibilitiesBlock />
+        <DirectionsBlock />
+        <Steps />
+        <Roles />
+        <VacancyBlock vacancies={vacancies} />
+        <StoriesBlock />
+        <FaqBlock />
+        <FooterBlock />
+      </ContentBlock>
       <ModalPage isOpen={!!vacancyId}>
         <ResponseToJob vacancy={vacancy} />
       </ModalPage>
-    </ContentBlock>
+    </>
   );
 };
 
