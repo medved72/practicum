@@ -12,6 +12,7 @@
       height: 138px;
 
       @include for-phone {
+        border-bottom: 1px solid #858585;
         padding: 11px 0;
         height: auto;
       }
