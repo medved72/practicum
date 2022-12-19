@@ -3,6 +3,7 @@ import { CardHeader, Typography } from "@shared/components";
 import { cn } from "@shared/utils";
 import PlayImage from "@shared/assets/images/play.svg";
 import styles from "./stories-card.module.scss";
+import Image from "next/image";
 
 export const StoriesCard: FC<{
   name: string;
@@ -10,6 +11,8 @@ export const StoriesCard: FC<{
   text: string;
   poster: {
     url: string;
+    width: number;
+    height: number;
     alt: string;
   };
   videoUrl: string;
@@ -26,9 +29,11 @@ export const StoriesCard: FC<{
     <div className={styles.storiesCard}>
       <div className={styles.videoContainer}>
         <div className={cn([styles.video, playPressed && styles.playPressed])}>
-          <img
+          <Image
             className={styles.backgroundImage}
             src={poster.url}
+            width={poster.width}
+            height={poster.height}
             alt={poster.alt}
           />
           <button className={styles.play} onClick={playVideo}>

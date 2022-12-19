@@ -1,14 +1,15 @@
 import { FC } from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { Card, Typography } from "@shared/components";
 import { cn } from "@shared/utils";
+import { Responsibility } from "./data";
 
 import styles from "./big-card.module.scss";
 
 interface BigCardProps {
   title: string;
   text: string;
-  image: StaticImageData;
+  image: Responsibility["image"];
 }
 
 export const BigCard: FC<BigCardProps> = ({ title, text, image }) => {
@@ -24,7 +25,14 @@ export const BigCard: FC<BigCardProps> = ({ title, text, image }) => {
         {text}
       </Typography.Text>
       <div className={styles.bigCard__image}>
-        <Image className={styles.bigCard__image} src={image} alt="" />
+        <picture>
+          <source media="(max-width: 980px)" srcSet={image.srcSet.mobile.src} />
+          <Image
+            className={styles.bigCard__image}
+            src={image.srcSet.desktop}
+            alt={image.alt}
+          />
+        </picture>
       </div>
     </Card>
   );

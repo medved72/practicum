@@ -2,7 +2,7 @@ import { FC, useEffect, useRef } from "react";
 import Image from "next/image";
 import RolesPeopleMentorImage from "@shared/assets/images/roles-peoples-mentor.png";
 import RolesPeopleReviewerImage from "@shared/assets/images/roles-peoples-reviewer.png";
-import RolesPeopleMobileImage from "@shared/assets/images/roles-peoples-mobile.png";
+import RolesPeopleMobileImage from "@shared/assets/images/roles-peoples-mobile.webp";
 
 import BubbleOneMentorImage from "@shared/assets/images/bubble-one-mentor.svg";
 import BubbleTwoMentorImage from "@shared/assets/images/bubble-two-mentor.svg";
@@ -17,7 +17,7 @@ import { Role } from "./utils";
 
 import styles from "./roles-image.module.scss";
 
-export const RolesImageDesktop: FC<{
+export const RolesImage: FC<{
   activeTab: Role;
 }> = (props) => {
   const rolesImageRef = useRef<HTMLDivElement>(null);
@@ -101,10 +101,4 @@ export const RolesImageDesktop: FC<{
       )}
     </div>
   );
-};
-
-export const RolesImage: FC<{
-  activeTab: Role;
-}> = ({ activeTab }) => {
-  return <RolesImageDesktop activeTab={activeTab} />;
 };

@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef } from "react";
 import Image from "next/image";
 import InvitationPeoplesPng from "@shared/assets/images/invitation-people.png";
-import InvitationPeoplesMobilePng from "@shared/assets/images/invitation-people-mobile.png";
+import InvitationPeoplesMobilePng from "@shared/assets/images/invitation-people-mobile.webp";
 import InvitationBubbleYellowBigImage from "@shared/assets/images/invitation-bubble-yellow-big.svg";
 import InvitationBubbleYellowSmallImage from "@shared/assets/images/invitation-bubble-yellow-small.svg";
 import InvitationBubbleBlueImage from "@shared/assets/images/invitation-bubble-blue.svg";
@@ -47,7 +47,7 @@ export const InvitationBlockImage: FC = () => {
           media="(max-width: 980px)"
           srcSet={InvitationPeoplesMobilePng.src}
         />
-        <Image src={InvitationPeoplesPng} alt="" />
+        <Image src={InvitationPeoplesPng} alt="" priority />
       </picture>
       <InvitationBubbleYellowBigImage className={styles.bubble1} />
       <InvitationBubbleYellowSmallImage className={styles.bubble2} />
