@@ -1,3 +1,6 @@
 {
-  "extends": ["stylelint-config-standard-scss", "stylelint-config-idiomatic-order"]
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-idiomatic-order"],
+  "rules": {
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$"
+  }
 }
