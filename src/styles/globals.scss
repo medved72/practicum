@@ -1,4 +1,3 @@
-//@import "slick-carousel/slick/slick";
 @import "colors";
 @import "fonts";
 @import "helpers";
@@ -16,11 +15,21 @@
 }
 
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 a {
@@ -44,7 +53,7 @@ body {
   display: flex;
 }
 
-.slick-slide > div:first-child{
+.slick-slide > div:first-child {
   height: 100%;
 }
 
@@ -56,26 +65,25 @@ body {
   .slick-dots {
     display: flex !important;
     justify-content: center;
-    gap: 12px;
     margin-top: 32px;
+    gap: 12px;
 
     li {
       line-height: 12px;
       list-style: none;
 
       button {
+        overflow: hidden;
+        width: 12px;
+        height: 12px;
         border: none;
         border-radius: 50%;
         background: $light-grey;
-        width: 12px;
-        height: 12px;
         text-indent: 100%;
         white-space: nowrap;
-        overflow: hidden;
-
       }
 
-      &.slick-active button{
+      &.slick-active button {
         background: $yellow;
       }
     }

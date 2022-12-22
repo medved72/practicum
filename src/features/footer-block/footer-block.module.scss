@@ -128,25 +128,21 @@
 
   .aboutUs {
     margin-right: 120px;
-    grid-row-end: 3;
-    grid-row-start: 1;
+    grid-row: 1 / 3;
     justify-self: flex-end;
 
     @include for-phone {
       margin-right: 0;
-      grid-row-end: initial;
-      grid-row-start: 2;
+      grid-row: 2 / initial;
       justify-self: initial;
     }
   }
 
   .joinUs {
-    grid-row-end: 3;
-    grid-row-start: 1;
+    grid-row: 1 / 3;
 
     @include for-phone {
-      grid-row-end: initial;
-      grid-row-start: 3;
+      grid-row: 3 / initial;
     }
   }
 

@@ -11,22 +11,22 @@
     width: 527px;
 
     @include for-phone {
-      width: calc(var(--max-content-width) - 40px);
       position: sticky;
       top: 40px;
+      width: calc(var(--max-content-width) - 40px);
     }
   }
 
   &__cards {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    margin-top: 80px;
     display: grid;
+    margin-top: 80px;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
 
     @include for-phone {
       margin-top: 40px;
-      grid-template-columns: 1fr;
       gap: 16px;
+      grid-template-columns: 1fr;
     }
   }
 }

@@ -2,25 +2,25 @@
 @import "src/styles/mixins";
 
 .stepCard {
-  padding: 12px 0 0;
-  background: white;
-  border-radius: 15px;
   width: 285px;
+  padding: 12px 0 0;
+  border-radius: 15px;
+  background: white;
 
   @include for-phone {
     width: min-content;
-    margin-left: 10px;
     margin-right: 10px;
+    margin-left: 10px;
   }
 
   &__description {
-    padding: 24px 16px 32px 16px;
     display: flex;
-    gap: 24px;
     flex-direction: column;
+    padding: 24px 16px 32px;
+    gap: 24px;
 
     @include for-phone {
-      padding: 28px 16px 32px 16px;
+      padding: 28px 16px 32px;
       gap: 12px;
     }
   }

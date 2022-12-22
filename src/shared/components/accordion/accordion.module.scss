@@ -3,25 +3,25 @@
 .accordion {
   .item {
     .label {
-      display: flex;
       position: relative;
-      border-bottom: 2px solid #858585;
-      justify-content: space-between;
-      align-items: center;
-      padding: 28px 0;
+      display: flex;
       height: 138px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 0;
+      border-bottom: 2px solid #858585;
 
       @include for-phone {
-        border-bottom: 1px solid #858585;
-        padding: 11px 0;
         height: auto;
+        padding: 11px 0;
+        border-bottom: 1px solid #858585;
       }
 
       .crossIcon {
         width: 82px;
         height: 82px;
         border-radius: 50%;
-        transition: transform .3s, background .1s;
+        transition: transform 0.3s, background 0.1s;
 
         @include for-phone {
           width: 32px;
@@ -32,14 +32,14 @@
           background: #151617;
 
           svg {
-            fill: white
+            fill: white;
           }
         }
 
         @include for-phone {
           svg {
-            height: 32px;
             width: 32px;
+            height: 32px;
           }
 
           &:hover {
@@ -74,7 +74,7 @@
 
       .content {
         max-height: 100vh;
-        transition: max-height .3s ease-in-out;
+        transition: max-height 0.3s ease-in-out;
       }
     }
   }

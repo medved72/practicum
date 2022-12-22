@@ -4,32 +4,31 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid rgb(204, 204, 204);
-  background: rgb(255, 255, 255);
-  overflow: auto;
-  border-radius: 4px;
-  outline: none;
-  padding: 120px 0;
-  width: 770px;
   display: grid;
+  overflow: auto;
+  width: 770px;
+  padding: 120px 0;
+  border: 1px solid rgb(204 204 204);
+  border-radius: 4px;
+  background: rgb(255 255 255);
   justify-items: center;
+  outline: none;
+  transform: translate(-50%, -50%);
 
   @include for-phone {
     position: fixed;
-    left: 0;
     top: 0;
-    transform: none;
+    left: 0;
     width: max(100vw, 100%);
     min-height: max(100vh, 100%);
-    padding: 0 20px;
     align-content: center;
+    padding: 0 20px;
+    transform: none;
   }
-
-
 
   &__title {
     margin-top: 20px;
+
     @include for-phone {
       margin-top: 40px;
     }
@@ -41,9 +40,10 @@
 
   &__button {
     display: flex;
+    width: 285px;
     justify-content: center;
     margin-top: 80px;
-    width: 285px;
+
     @include for-phone {
       width: 100%;
       margin-top: 120px;
@@ -53,6 +53,6 @@
 
 .requestSendSuccessfullModalOverlay {
   position: fixed;
+  background-color: rgb(0 0 0 / 75%);
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.75);
 }

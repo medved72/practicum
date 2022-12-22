@@ -16,14 +16,14 @@
   &__card {
     display: grid;
     min-height: 134px;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     padding: 20px 32px;
 
     @include for-phone {
-      justify-content: flex-start;
-      align-items: flex-start;
       min-height: auto;
+      align-items: flex-start;
+      justify-content: flex-start;
       padding: 24px 16px;
     }
   }

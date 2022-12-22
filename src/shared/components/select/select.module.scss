@@ -2,24 +2,24 @@
 @import "src/styles/mixins";
 
 .field {
-  display: block;
   position: relative;
-  padding: 11px 0;
+  display: block;
   height: 86px;
+  padding: 11px 0;
 
   .placeholder {
     position: absolute;
-    font-family: 'YS Text';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 31px;
-    transition: all .3s;
     top: 24px;
     left: 0;
     color: $grey;
     cursor: text;
+    font-family: "YS Text";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31px;
     pointer-events: none;
+    transition: all 0.3s;
 
     @include for-phone {
       top: 28px;
@@ -29,32 +29,34 @@
   }
 
   .input {
-    margin-top: 4px;
     width: 100%;
+    padding: 10px 0;
     border: none;
     border-bottom: 1px solid $grey;
-    outline: none;
+    margin-top: 4px;
+    appearance: none;
     background: transparent;
-    font-family: 'YS Text';
+    font-family: "YS Text";
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
     line-height: 31px;
-    padding: 10px 0;
-    appearance: none;
+    outline: none;
+
     @include for-phone {
       font-size: 16px;
       line-height: 21px;
     }
   }
+
   &::after {
-    content: "";
     position: absolute;
-    right: 0;
     top: 34px;
+    right: 0;
     width: 24px;
     height: 24px;
     background: url("../../assets/images/chevron-down.svg");
+    content: "";
     pointer-events: none;
 
     @include for-phone {
@@ -65,7 +67,7 @@
 
 .field__empty {
   select {
-   color: transparent;
+    color: transparent;
   }
 
   option {
@@ -78,6 +80,7 @@
     top: 0;
     font-size: 18px;
     line-height: 23px;
+
     @include for-phone {
       font-size: 14px;
       line-height: 18px;
@@ -90,6 +93,7 @@
     top: 0;
     font-size: 18px;
     line-height: 23px;
+
     @include for-phone {
       font-size: 14px;
       line-height: 18px;

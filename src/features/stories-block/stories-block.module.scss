@@ -11,8 +11,8 @@
 
   .arrow {
     position: absolute;
-    left: 199px;
     top: 156px;
+    left: 199px;
 
     @include for-phone {
       display: none;
@@ -25,8 +25,8 @@
 
   .motionControls {
     display: flex;
-    gap: 34px;
     margin-bottom: 94px;
+    gap: 34px;
 
     @include for-phone {
       display: none;
@@ -35,17 +35,19 @@
 
   .button {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 48px;
     height: 48px;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     background: transparent;
     cursor: pointer;
 
     &:hover {
       background: $black;
-      svg path, svg rect {
+
+      svg path,
+      svg rect {
         fill: white;
       }
     }
@@ -53,7 +55,9 @@
     &:active {
       border: 1px solid $grey;
       background: $grey;
-      svg path, svg rect {
+
+      svg path,
+      svg rect {
         fill: white;
       }
     }
@@ -64,9 +68,8 @@
   }
 
   .story {
-    margin: 0 10px;
     width: fit-content;
     height: 100%;
+    margin: 0 10px;
   }
 }
-

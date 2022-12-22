@@ -9,31 +9,31 @@
   }
 
   .agreement {
-    padding: 22px 24px;
     display: grid;
-    grid-auto-flow: column;
     align-items: center;
-    gap: 24px;
+    padding: 22px 24px;
     cursor: pointer;
+    gap: 24px;
+    grid-auto-flow: column;
 
     @include for-phone {
+      padding: 0;
       margin-top: 20px;
       margin-bottom: 40px;
-      padding: 0;
     }
 
     input {
-      outline: none;
       width: 24px;
       height: 24px;
+      outline: none;
     }
   }
 
   .button {
-    justify-self: center;
     display: flex;
-    justify-content: center;
     width: 285px;
+    justify-content: center;
+    justify-self: center;
 
     @include for-phone {
       &:not(:last-of-type) {
@@ -42,4 +42,3 @@
     }
   }
 }
-

@@ -2,17 +2,17 @@
 
 .button {
   display: flex;
+  width: max-content;
   align-items: center;
   border: none;
   border-radius: 120px;
-  transition: background .15s, color .15ms;
   cursor: pointer;
-  width: max-content;
-  font-family: 'YS Text';
+  font-family: "YS Text";
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
   line-height: 130%;
+  transition: background 0.15s, color 0.15ms;
 }
 
 .button--medium {
@@ -24,28 +24,28 @@
 }
 
 .button--default {
-  color: white;
   background: #000;
+  color: white;
 
   &:disabled {
-    color: $grey;
     background: $light-grey;
+    color: $grey;
     cursor: not-allowed;
   }
 
-  &:not(.disabledHover):not(:disabled):hover {
+  &:not(.disabledHover, :disabled):hover {
     background: $yellow;
     color: black;
   }
 }
 
 .button--outline {
-  border: 2px solid #000000;
+  border: 2px solid #000;
 }
 
 .button--icon {
-  padding: 0;
   width: min-content;
   height: min-content;
+  padding: 0;
   background: transparent;
 }

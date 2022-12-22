@@ -3,12 +3,12 @@
 
 .tabs {
   &__panel {
-    width: min-content;
     display: flex;
-    gap: 4px;
-    border-radius: 12px;
+    width: min-content;
     padding: 6px;
-    background: rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    background: rgb(0 0 0 / 6%);
+    gap: 4px;
 
     @include for-phone {
       width: 100%;
@@ -16,34 +16,33 @@
   }
 
   &__tabButton {
-
-    composes: text-s from '../typography/text.module.scss';
-    line-height: 24px;
-    height: 36px;
+    composes: text-s from "../typography/text.module.scss";
     display: flex;
-    justify-content: center;
+    height: 36px;
     align-items: center;
-    color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
     padding: 6px 16px;
     border-radius: 10px;
     background: transparent;
+    color: rgb(0 0 0 / 85%);
     cursor: pointer;
-    transition: all .15s ease;
+    line-height: 24px;
+    transition: all 0.15s ease;
     white-space: nowrap;
 
     @include for-phone {
-      line-height: 20px;
       flex: 1;
+      line-height: 20px;
     }
 
     input {
+      position: absolute;
       width: 0;
       height: 0;
-      position: absolute;
     }
 
-    &:hover{
-      background: rgba(0,0,0,0.06);
+    &:hover {
+      background: rgb(0 0 0 / 6%);
     }
   }
 

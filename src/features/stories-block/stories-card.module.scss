@@ -4,8 +4,8 @@
 .storiesCard {
   width: 488px;
   height: 100%;
-  background: white;
   border-radius: 15px;
+  background: white;
 
   @include for-phone {
     width: calc(var(--max-content-width) - 40px);
@@ -13,23 +13,22 @@
 
   .video {
     position: relative;
+    overflow: hidden;
     width: 100%;
     height: 232px;
     border-radius: 15px;
-    overflow: hidden;
 
     .backgroundImage {
-      transition: all .3s;
-
+      transition: all 0.3s;
     }
 
     &:hover {
       .backgroundImage {
-         transform: scale(1.2);
+        transform: scale(1.2);
       }
     }
 
-    video {width: 0;height: 0; position: absolute}
+    video { position: absolute; width: 0; height: 0; }
 
     &:hover {
       background-size: 110%;
@@ -52,17 +51,17 @@
 
     .play {
       position: absolute;
+      top: 50%;
+      left: 50%;
+      display: flex;
       width: 36px;
       height: 36px;
+      align-items: center;
+      justify-content: center;
+      border: none;
       border-radius: 50%;
       background: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      left: 50%;
-      top: 50%;
       cursor: pointer;
-      border: none;
       transform: translate(-50%, -50%);
     }
   }
@@ -82,8 +81,8 @@
   }
 
   .position {
-    color: $grey;
     margin-bottom: 16px;
+    color: $grey;
 
     @include for-phone {
       font-size: 14px;
