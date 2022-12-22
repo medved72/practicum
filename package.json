@@ -30,6 +30,8 @@
     "@types/react-slick": "^0.23.10",
     "file-loader": "^6.2.0",
     "prettier": "^2.8.0",
-    "sass": "^1.56.1"
+    "sass": "^1.56.1",
+    "stylelint": "^14.16.0",
+    "stylelint-config-standard-scss": "^6.1.0"
   }
 }
