@@ -45,7 +45,7 @@ export const VacancyNotFound: FC = () => {
   return (
     <ContentBlock className={styles.vacancyNotFound}>
       <div className={styles.vacancyNotFound__header}>
-        <Typography.Header level={2}>
+        <Typography.Header as="h2" type="header-2">
           Нет подходящего варианта?
         </Typography.Header>
         <Typography.Text
@@ -89,8 +89,9 @@ export const VacancyNotFound: FC = () => {
           <label className={styles.agreement}>
             <input type="checkbox" name="agreement" />
             <Typography.Text size="supportive-s">
-              Я даю согласие АНО ДПО «ШАД» и ООО «ЯНДЕКС» на обработку указанных
-              данных для целей рассмотрения анкеты и обратной связи по ней.
+              Я даю согласие АНО ДПО «ШАД» и ООО «ЯНДЕКС» на&nbsp;обработку
+              указанных данных для целей рассмотрения анкеты и обратной связи по
+              ней.
             </Typography.Text>
           </label>
 

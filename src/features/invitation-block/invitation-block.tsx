@@ -7,7 +7,7 @@ import styles from "./invitation-block.module.scss";
 export const InvitationBlock: FC = () => {
   return (
     <div className={styles.invitationBlock}>
-      <Typography.Header level={1} className={styles.title}>
+      <Typography.Header className={styles.title} as="h1" type="header-1">
         Станьте наставником или ревьюером
       </Typography.Header>
       <Typography.Text className={styles.text} size={"s"}>

@@ -1,5 +1,5 @@
 import { FC, useCallback, useRef, useState } from "react";
-import { CardHeader, Typography } from "@shared/components";
+import { Typography } from "@shared/components";
 import { cn } from "@shared/utils";
 import PlayImage from "@shared/assets/images/play.svg";
 import styles from "./stories-card.module.scss";
@@ -39,15 +39,19 @@ export const StoriesCard: FC<{
           <button className={styles.play} onClick={playVideo}>
             <PlayImage />
           </button>
-          <video ref={videoRef} autoPlay={false} preload="auto" controls>
+          <video ref={videoRef} autoPlay={false} controls>
             <source src={videoUrl} />
           </video>
         </div>
       </div>
       <div className={styles.content}>
-        <CardHeader className={styles.header} size="s">
+        <Typography.Header
+          className={styles.header}
+          as="h4"
+          type="card-header-s"
+        >
           {name}
-        </CardHeader>
+        </Typography.Header>
         <Typography.Text className={styles.position} size="s">
           {position}
         </Typography.Text>

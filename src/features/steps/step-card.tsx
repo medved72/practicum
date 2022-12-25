@@ -11,7 +11,9 @@ export const StepCard: FC<{
     <Card className={styles.stepCard}>
       {previewImage}
       <div className={styles.stepCard__description}>
-        <Card.Header size="s">{title}</Card.Header>
+        <Typography.Header as="h4" type="card-header-s">
+          {title}
+        </Typography.Header>
         <Typography.Text className={styles.stepCard__descriptionText} size="s">
           {description}
         </Typography.Text>

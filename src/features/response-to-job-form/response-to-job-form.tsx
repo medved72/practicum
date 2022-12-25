@@ -33,11 +33,7 @@ export const ResponseToJobForm: FC<ResponseToJobFormProps> = ({ onSubmit }) => {
 
     const emailRegexp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
-    if (!emailRegexp.test(values.email)) {
-      return false;
-    }
-
-    return true;
+    return emailRegexp.test(values.email);
   };
 
   const handleChange = () => {
@@ -70,8 +66,9 @@ export const ResponseToJobForm: FC<ResponseToJobFormProps> = ({ onSubmit }) => {
       <label className={styles.agreement}>
         <input type="checkbox" name="agreement" />
         <Typography.Text size="supportive-s">
-          Я даю согласие АНО ДПО «ШАД» и ООО «ЯНДЕКС» на обработку указанных
-          данных для целей рассмотрения анкеты и обратной связи по ней.
+          Я даю согласие АНО ДПО «ШАД» и&nbsp;ООО&nbsp;«ЯНДЕКС» на обработку
+          указанных данных для целей рассмотрения анкеты и&nbsp;обратной связи
+          по ней.
         </Typography.Text>
       </label>
       <Button className={styles.button} htmlType="submit" disabled={!isValid}>

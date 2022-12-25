@@ -34,7 +34,7 @@
       max-width: var(--max-content-width);
       margin-top: 24px;
       margin-bottom: 24px;
-      grid-row-start: initial;
+      grid-row-start: auto;
     }
   }
 
@@ -46,7 +46,7 @@
       width: 100%;
       justify-content: center;
       margin: 45px auto 32px;
-      grid-row-start: initial;
+      grid-row-start: auto;
     }
   }
 
@@ -55,7 +55,7 @@
     grid-row: 1 / 4;
 
     @include for-phone {
-      grid-row: initial / initial;
+      grid-row: auto / auto;
     }
   }
 }

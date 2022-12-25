@@ -18,7 +18,11 @@ export const Roles: FC = () => {
       </div>
       <RolesImage activeTab={activeTab} />
       <div className={styles.roles__tabs}>
-        <Typography.Header className={styles.roles__header} level={2}>
+        <Typography.Header
+          className={styles.roles__header}
+          as="h2"
+          type="header-2"
+        >
           Роли в нашей команде
         </Typography.Header>
         <Tabs

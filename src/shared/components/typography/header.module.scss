@@ -1,49 +1,46 @@
 @import "src/styles/colors";
 @import "src/styles/mixins";
 
-.header {
-  color: $black;
-  font-family: "YS Text";
-  font-style: normal;
-  font-weight: 500;
-}
-
 .header-1 {
-  font-size: 62px;
-  line-height: 74px;
+  @include header-1;
 
   @include for-phone {
-    font-size: 32px;
-    line-height: 38px;
+    @include mobile-header-1;
   }
 }
 
 .header-2 {
-  font-size: 48px;
-  line-height: 58px;
+  @include header-2;
 
   @include for-phone {
-    font-size: 30px;
-    line-height: 36px;
+    @include mobile-header-2;
   }
 }
 
 .header-3 {
-  font-size: 40px;
-  line-height: 48px;
+  @include header-3;
 
   @include for-phone {
-    font-size: 24px;
-    line-height: 31px;
+    @include mobile-header-3;
   }
 }
 
 .header-4 {
-  font-size: 32px;
-  line-height: 42px;
+  @include header-4;
 
   @include for-phone {
-    font-size: 18px;
-    line-height: 23px;
+    @include mobile-header-4;
   }
+}
+
+.card-header-l {
+  @include card-header-l;
+
+  @include for-phone {
+    @include mobile-card-header-l;
+  }
+}
+
+.card-header-s {
+  @include card-header-s;
 }

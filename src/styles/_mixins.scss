@@ -1,15 +1,99 @@
-@import "./breakpoints";
+@import "variables";
+@import "breakpoints";
 
-@mixin bubbleAnimate($topStart, $topEnd, $leftStart, $leftEnd) {
-  $topDiff: $topEnd - $topStart;
-  $leftDiff: $leftEnd - $leftStart;
+@mixin bubble-animate($topStart, $topEnd, $leftStart, $leftEnd) {
+  $top-diff: $topEnd - $topStart;
+  $left-diff: $leftEnd - $leftStart;
 
-  top: calc($topStart + $topDiff * var(--intersection-ratio));
-  left: calc($leftStart + $leftDiff * var(--intersection-ratio));
+  top: calc($topStart + $top-diff * var(--intersection-ratio));
+  left: calc($leftStart + $left-diff * var(--intersection-ratio));
 }
 
 @mixin for-phone {
   @media only screen and (max-width: $mobile-breakpoint) {
     @content;
   }
+}
+
+@mixin header {
+  font-family: $font-header-font-family;
+  font-style: $font-header-font-style;
+  font-weight: $font-header-font-weight;
+}
+
+@mixin header-1 {
+  @include header;
+
+  font-size: $font-header-1-font-size;
+  line-height: $font-header-1-line-height;
+}
+
+@mixin mobile-header-1 {
+  @include header;
+
+  font-size: $font-mobile-header-1-font-size;
+  line-height: $font-mobile-header-1-line-height;
+}
+
+@mixin header-2 {
+  @include header;
+
+  font-size: $font-header-2-font-size;
+  line-height: $font-header-2-line-height;
+}
+
+@mixin mobile-header-2 {
+  @include header;
+
+  font-size: $font-mobile-header-2-font-size;
+  line-height: $font-mobile-header-2-line-height;
+}
+
+@mixin header-3 {
+  @include header;
+
+  font-size: $font-header-3-font-size;
+  line-height: $font-header-3-line-height;
+}
+
+@mixin mobile-header-3 {
+  @include header;
+
+  font-size: $font-mobile-header-3-font-size;
+  line-height: $font-mobile-header-3-line-height;
+}
+
+@mixin header-4 {
+  @include header;
+
+  font-size: $font-header-4-font-size;
+  line-height: $font-header-4-line-height;
+}
+
+@mixin mobile-header-4 {
+  @include header;
+
+  font-size: $font-mobile-header-4-font-size;
+  line-height: $font-mobile-header-4-line-height;
+}
+
+@mixin card-header-l {
+  @include header;
+
+  font-size: $font-card-header-l-font-size;
+  line-height: $font-card-header-l-line-height;
+}
+
+@mixin mobile-card-header-l {
+  @include header;
+
+  font-size: $font-mobile-card-header-l-font-size;
+  line-height: $font-mobile-card-header-l-line-height;
+}
+
+@mixin card-header-s {
+  @include header;
+
+  font-size: $font-card-header-s-font-size;
+  line-height: $font-card-header-s-line-height;
 }

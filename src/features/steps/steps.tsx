@@ -25,29 +25,33 @@ const settings: ComponentProps<typeof Slider> = {
 export const StepsMobile: FC = () => {
   return (
     <div className={styles.steps}>
-      <Typography.Header className={styles.steps__header} level={2}>
+      <Typography.Header
+        className={styles.steps__header}
+        as="h2"
+        type="header-2"
+      >
         Как стать экспертом Практикума
       </Typography.Header>
       <Slider className={styles.slickSlider} {...settings}>
         <StepCard
           previewImage={<RoleImage />}
           title="Выберите роль"
-          description="Определитесь с курсом и поймите, что ближе: быть наставником или ревьюером"
+          description="Определитесь с курсом и&nbsp;поймите, что ближе: быть наставником или&nbsp;ревьюером"
         />
         <StepCard
           previewImage={<RequestImage />}
           title="Заполните заявку"
-          description="Начать можно прямо сейчас. Даже если нет предложений, мы свяжемся с вами"
+          description="Начать можно прямо сейчас. Даже если нет предложений, мы&nbsp;свяжемся с&nbsp;вами"
         />
         <StepCard
           previewImage={<LearningImage />}
           title="Пройдите обучение"
-          description="Пригласим на двухнедельное бесплатное обучение для прокачки софтов"
+          description="Пригласим на&nbsp;двухнедельное бесплатное обучение для&nbsp;прокачки софтов"
         />
         <StepCard
           previewImage={<ShareKnowledgeImage />}
           title="Делитесь знаниями"
-          description="Студенты Практикума ждут поддержки опытных коллег на курсах"
+          description="Студенты Практикума ждут поддержки опытных коллег на&nbsp;курсах"
         />
       </Slider>
 
@@ -59,7 +63,11 @@ export const StepsMobile: FC = () => {
 export const StepsDesktop: FC = () => {
   return (
     <div className={styles.steps}>
-      <Typography.Header className={styles.steps__header} level={2}>
+      <Typography.Header
+        className={styles.steps__header}
+        as="h2"
+        type="header-2"
+      >
         Как стать экспертом Практикума
       </Typography.Header>
       <Grid>
@@ -67,28 +75,28 @@ export const StepsDesktop: FC = () => {
           <StepCard
             previewImage={<RoleImage />}
             title="Выберите роль"
-            description="Определитесь с курсом и поймите, что ближе: быть наставником или ревьюером"
+            description="Определитесь с курсом и&nbsp;поймите, что ближе: быть наставником или&nbsp;ревьюером"
           />
         </Grid.Item>
         <Grid.Item>
           <StepCard
             previewImage={<RequestImage />}
             title="Заполните заявку"
-            description="Начать можно прямо сейчас. Даже если нет предложений, мы свяжемся с вами"
+            description="Начать можно прямо сейчас. Даже если нет предложений, мы&nbsp;свяжемся с&nbsp;вами"
           />
         </Grid.Item>
         <Grid.Item>
           <StepCard
             previewImage={<LearningImage />}
             title="Пройдите обучение"
-            description="Пригласим на двухнедельное бесплатное обучение для прокачки софтов"
+            description="Пригласим на&nbsp;двухнедельное бесплатное обучение для&nbsp;прокачки софтов"
           />
         </Grid.Item>
         <Grid.Item>
           <StepCard
             previewImage={<ShareKnowledgeImage />}
             title="Делитесь знаниями"
-            description="Студенты Практикума ждут поддержки опытных коллег на курсах"
+            description="Студенты Практикума ждут поддержки опытных коллег на&nbsp;курсах"
           />
         </Grid.Item>
         <Grid.Item span="4">

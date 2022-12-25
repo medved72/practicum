@@ -4,13 +4,19 @@ import { cn } from "@shared/utils";
 import styles from "./header.module.scss";
 
 export const Header: FC<{
-  level: 1 | 2 | 3 | 4;
+  as: "h1" | "h2" | "h3" | "h4";
+  type:
+    | "header-1"
+    | "header-2"
+    | "header-3"
+    | "header-4"
+    | "card-header-l"
+    | "card-header-s";
   className?: string;
   children?: ReactNode;
-}> = ({ children, className, level }) => {
-  return (
-    <div className={cn([className, styles.header, styles[`header-${level}`]])}>
-      {children}
-    </div>
-  );
+}> = ({ children, className, type, as }) => {
+  const TagName = as;
+  const classes = cn([className, styles[type]]);
+
+  return <TagName className={classes}>{children}</TagName>;
 };

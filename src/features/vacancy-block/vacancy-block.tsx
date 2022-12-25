@@ -31,7 +31,11 @@ export const VacancyBlock: FC<VacancyBlockProps> = ({ vacancies }) => {
       <div className={styles.vacancyBlock__arrow}>
         <Arrow />
       </div>
-      <Typography.Header className={styles.vacancyBlock__header} level={2}>
+      <Typography.Header
+        className={styles.vacancyBlock__header}
+        as="h2"
+        type="header-2"
+      >
         Наши открытые предложения
       </Typography.Header>
       <Tabs tabs={tabs} />

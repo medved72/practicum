@@ -23,12 +23,16 @@ export const VacancyForm: FC<VacancyFormProps> = ({ vacancy }) => {
 
   return (
     <ContentBlock className={styles.responseToJob}>
-      <Typography.Header className={styles.responseToJob__header} level={1}>
+      <Typography.Header
+        className={styles.responseToJob__header}
+        as="h1"
+        type="header-1"
+      >
         {prefixTitleMap[vacancy.type]} <br /> {vacancy.name}
       </Typography.Header>
       <div className={styles.responseToJob__sections}>
         <div className={styles.responseToJob__form}>
-          <Typography.Header level={3}>
+          <Typography.Header as="h3" type="header-3">
             Откликнуться на&nbsp;предложение
           </Typography.Header>
           <ResponseToJobForm onSubmit={handleSubmit} />
