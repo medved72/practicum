@@ -20,7 +20,7 @@ const settings: ComponentProps<typeof Slider> = {
 const MobileResponsibilities: FC = () => {
   return (
     <div className={styles.responsibilitiesBlock}>
-      <Typography.Header className={styles.header} level={2}>
+      <Typography.Header className={styles.header} as="h2" type="header-2">
         В роли эксперта Практикума вы будете
       </Typography.Header>
       <Slider {...settings}>
@@ -35,7 +35,7 @@ const MobileResponsibilities: FC = () => {
 const DesktopResponsibilities: FC = () => {
   return (
     <div className={styles.responsibilitiesBlock}>
-      <Typography.Header level={2} className={styles.header}>
+      <Typography.Header className={styles.header} as="h2" type="header-2">
         В роли эксперта Практикума вы будете
       </Typography.Header>
       <Grid>

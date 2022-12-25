@@ -11,7 +11,9 @@ const AccordionItem: FC<{ label: string; children: ReactNode }> = ({
     <div className={styles.item}>
       <label className={styles.label}>
         <input type="checkbox" />
-        <Typography.Header level={3}>{label}</Typography.Header>
+        <Typography.Header as="h3" type="header-3">
+          {label}
+        </Typography.Header>
         <div className={styles.crossIcon}>
           <CrossImage />
         </div>

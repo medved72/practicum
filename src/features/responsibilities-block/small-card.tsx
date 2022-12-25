@@ -11,7 +11,9 @@ export interface SmallCardProps {
 export const SmallCard: FC<SmallCardProps> = ({ text, title }) => {
   return (
     <Card color="blue" className={styles.smallCard}>
-      <Card.Header size="l">{title}</Card.Header>
+      <Typography.Header as="h4" type="card-header-l">
+        {title}
+      </Typography.Header>
       <Typography.Text className={styles.smallCard__text} size="s">
         {text}
       </Typography.Text>

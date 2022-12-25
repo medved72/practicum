@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { CardHeader, Typography } from "@shared/components";
+import { Typography } from "@shared/components";
 import Link from "next/link";
 import { VacancyDto } from "@shared/api";
 
@@ -14,13 +14,21 @@ export const VacancyListItem: FC<{
       <div className={styles.vacancyListItem__descriptionBlock}>
         <div>
           {!!prefix && (
-            <CardHeader className={styles.vacancyListItem__prefix} size="l">
+            <Typography.Header
+              className={styles.vacancyListItem__prefix}
+              as="h4"
+              type="card-header-l"
+            >
               {prefix}
-            </CardHeader>
+            </Typography.Header>
           )}
-          <CardHeader className={styles.vacancyListItem__name} size="l">
+          <Typography.Header
+            className={styles.vacancyListItem__name}
+            as="h4"
+            type="card-header-l"
+          >
             {vacancy.name}
-          </CardHeader>
+          </Typography.Header>
         </div>
         <Typography.Text
           className={styles.vacancyListItem__description}

@@ -15,9 +15,13 @@ interface BigCardProps {
 export const BigCard: FC<BigCardProps> = ({ title, text, image }) => {
   return (
     <Card className={styles.bigCard}>
-      <Card.Header className={styles.bigCard__header} size="l">
+      <Typography.Header
+        className={styles.bigCard__header}
+        as="h4"
+        type="card-header-l"
+      >
         {title}
-      </Card.Header>
+      </Typography.Header>
       <Typography.Text
         className={cn([styles.bigCard__text, styles.cardText])}
         size="s"

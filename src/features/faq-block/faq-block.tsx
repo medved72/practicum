@@ -5,7 +5,7 @@ import styles from "./faq-block.module.scss";
 export const FaqBlock: FC = () => {
   return (
     <div id="faq" className={styles.faqBlock}>
-      <Typography.Header className={styles.header} level={2}>
+      <Typography.Header className={styles.header} as="h2" type="header-2">
         Если остались вопросы
       </Typography.Header>
       <Accordion>

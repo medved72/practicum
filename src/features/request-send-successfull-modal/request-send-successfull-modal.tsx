@@ -28,7 +28,8 @@ export const RequestSendSuccessfullModal: FC<
       <RequestSendSuccessImage />
       <Typography.Header
         className={styles.requestSendSuccessfullModal__title}
-        level={3}
+        as="h3"
+        type="header-3"
       >
         Спасибо, ваша заявка отправлена
       </Typography.Header>

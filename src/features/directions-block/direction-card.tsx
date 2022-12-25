@@ -1,7 +1,7 @@
 import { FC, ReactNode } from "react";
 import { Button, Card, Typography } from "@shared/components";
 import { cn } from "@shared/utils";
-import { useIsMobile, useWindowSize } from "@shared/hooks";
+import { useIsMobile } from "@shared/hooks";
 import ArrowMobImage from "@shared/assets/images/arrow_mob.svg";
 
 import styles from "./direction-card.module.scss";
@@ -14,7 +14,11 @@ const DirectionCardMobile: FC<{
   return (
     <Card className={cn([styles.directionCard])}>
       <div onClick={() => alert(`Переход на страницу "${header}"`)}>
-        <Card.Header className={styles.directionCard__header} size="l">
+        <Typography.Header
+          className={styles.directionCard__header}
+          as="h4"
+          type="card-header-l"
+        >
           {header}
           <Button
             className={styles.directionCard__goToFullDescription}
@@ -22,7 +26,7 @@ const DirectionCardMobile: FC<{
           >
             <ArrowMobImage />
           </Button>
-        </Card.Header>
+        </Typography.Header>
         <Typography.Text
           className={styles.directionCard__shortDescription}
           size="s"
@@ -51,9 +55,13 @@ const DirectionCardDesktop: FC<{
     >
       {!hidePreviewOnDesktop && (
         <div className={styles.directionCard__front}>
-          <Card.Header className={styles.directionCard__header} size="l">
+          <Typography.Header
+            className={styles.directionCard__header}
+            as="h4"
+            type="card-header-l"
+          >
             {header}
-          </Card.Header>
+          </Typography.Header>
           <div className={styles.directionCard__imageWrapper}>
             {previewImage}
           </div>
@@ -67,9 +75,13 @@ const DirectionCardDesktop: FC<{
             : styles.directionCard__front
         }
       >
-        <Card.Header className={styles.directionCard__header} size="l">
+        <Typography.Header
+          className={styles.directionCard__header}
+          type="card-header-l"
+          as="h4"
+        >
           {header}
-        </Card.Header>
+        </Typography.Header>
         <Typography.Text
           className={styles.directionCard__shortDescription}
           size="s"

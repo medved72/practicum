@@ -37,7 +37,7 @@ export const StoriesBlock: FC = () => {
       <div className={styles.arrow}>
         <ArrowImage />
       </div>
-      <Typography.Header className={styles.header} level={2}>
+      <Typography.Header className={styles.header} as="h2" type="header-2">
         Истории ребят из нашей команды
       </Typography.Header>
       <div className={styles.motionControls}>

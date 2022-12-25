@@ -14,14 +14,18 @@ import styles from "./directions-block.module.scss";
 export const DirectionsBlock: FC = () => {
   return (
     <div id="directions" className={styles.directionsBlock}>
-      <Typography.Header className={styles.directionsBlock__header} level={2}>
-        Помогаем развиваться по направлениям
+      <Typography.Header
+        className={styles.directionsBlock__header}
+        as="h2"
+        type="header-2"
+      >
+        Помогаем развиваться по&nbsp;направлениям
       </Typography.Header>
       <div className={styles.directionsBlock__cards}>
         <DirectionCard
           previewImage={<FacultativeManagementImage />}
           header="Менеджмент"
-          text="Интернет-маркетинг и управление трафиком"
+          text="Интернет-маркетинг и&nbsp;управление трафиком"
         />
         <DirectionCard
           previewImage={<FacultativeDesignImage />}
@@ -31,12 +35,12 @@ export const DirectionsBlock: FC = () => {
         <DirectionCard
           previewImage={<FacultativeDataAnalyzingImage />}
           header="Анализ данных"
-          text="SQL, аналитика, Data Science  и архитектура данных"
+          text="SQL, аналитика, Data Science  и&nbsp;архитектура данных"
         />
         <DirectionCard
           previewImage={<FacultativeMarketingImage />}
           header="Маркентинг"
-          text="Интернет-маркетинг и управление трафиком"
+          text="Интернет-маркетинг и&nbsp;управление трафиком"
         />
         <DirectionCard
           previewImage={<FacultativeProgrammingImage />}

@@ -17,7 +17,9 @@ export const ResponseToJobDescription: FC<ResponseToJobDescriptionProps> = ({
   return (
     <div className={styles.responseToJobDescription}>
       <section className={styles.section}>
-        <Typography.Header level={3}>Обязанности</Typography.Header>
+        <Typography.Header as="h3" type="header-3">
+          Обязанности
+        </Typography.Header>
         <div className={styles.skills}>
           {responsibilities.map((item, index) => (
             <Typography.Text key={index} size="l">
@@ -27,7 +29,9 @@ export const ResponseToJobDescription: FC<ResponseToJobDescriptionProps> = ({
         </div>
       </section>
       <section className={styles.section}>
-        <Typography.Header level={3}>Требования</Typography.Header>
+        <Typography.Header as="h3" type="header-3">
+          Требования
+        </Typography.Header>
         <div className={styles.skills}>
           {requirements.map((item, index) => (
             <Typography.Text key={index} size="l">
@@ -37,7 +41,9 @@ export const ResponseToJobDescription: FC<ResponseToJobDescriptionProps> = ({
         </div>
       </section>
       <section className={styles.section}>
-        <Typography.Header level={3}>Условия</Typography.Header>
+        <Typography.Header as="h3" type="header-3">
+          Условия
+        </Typography.Header>
         <div className={styles.skills}>
           {terms.map((item, index) => (
             <Typography.Text key={index} size="l">

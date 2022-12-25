@@ -24,29 +24,29 @@
 
   .reviewer {
     &.bubble1 {
-      @include bubbleAnimate(33px, 0, 166px, 219px);
+      @include bubble-animate(33px, 0, 166px, 219px);
     }
 
     &.bubble2 {
-      @include bubbleAnimate(294px, 257px, 83px, 48px);
+      @include bubble-animate(294px, 257px, 83px, 48px);
     }
 
     &.bubble3 {
-      @include bubbleAnimate(426px, 475px, 503px, 458px);
+      @include bubble-animate(426px, 475px, 503px, 458px);
     }
   }
 
   .mentor {
     &.bubble1 {
-      @include bubbleAnimate(36px, 0, 145px, 219px);
+      @include bubble-animate(36px, 0, 145px, 219px);
     }
 
     &.bubble2 {
-      @include bubbleAnimate(292px, 257px, 75px, 48px);
+      @include bubble-animate(292px, 257px, 75px, 48px);
     }
 
     &.bubble3 {
-      @include bubbleAnimate(449px, 475px, 471px, 458px);
+      @include bubble-animate(449px, 475px, 471px, 458px);
     }
   }
 }
