@@ -17,7 +17,7 @@ export const BigCard: FC<BigCardProps> = ({ title, text, image }) => {
     <Card className={styles.bigCard}>
       <Typography.Header
         className={styles.bigCard__header}
-        as="h4"
+        as="h3"
         type="card-header-l"
       >
         {title}

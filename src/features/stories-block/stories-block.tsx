@@ -44,12 +44,14 @@ export const StoriesBlock: FC = () => {
         <button
           className={styles.button}
           onClick={() => sliderRef.current?.slickPrev()}
+          aria-label="предыдущее видео"
         >
           <BackwardImage />
         </button>
         <button
           className={styles.button}
           onClick={() => sliderRef.current?.slickNext()}
+          aria-label="следующее видео"
         >
           <ForwardImage />
         </button>

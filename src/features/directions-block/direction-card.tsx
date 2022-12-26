@@ -16,7 +16,7 @@ const DirectionCardMobile: FC<{
       <div onClick={() => alert(`Переход на страницу "${header}"`)}>
         <Typography.Header
           className={styles.directionCard__header}
-          as="h4"
+          as="h3"
           type="card-header-l"
         >
           {header}
@@ -57,7 +57,7 @@ const DirectionCardDesktop: FC<{
         <div className={styles.directionCard__front}>
           <Typography.Header
             className={styles.directionCard__header}
-            as="h4"
+            as="h3"
             type="card-header-l"
           >
             {header}
@@ -78,7 +78,7 @@ const DirectionCardDesktop: FC<{
         <Typography.Header
           className={styles.directionCard__header}
           type="card-header-l"
-          as="h4"
+          as="h3"
         >
           {header}
         </Typography.Header>

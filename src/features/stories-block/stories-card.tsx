@@ -36,7 +36,11 @@ export const StoriesCard: FC<{
             height={poster.height}
             alt={poster.alt}
           />
-          <button className={styles.play} onClick={playVideo}>
+          <button
+            className={styles.play}
+            onClick={playVideo}
+            aria-label="начать воспроизведение"
+          >
             <PlayImage />
           </button>
           <video ref={videoRef} autoPlay={false} controls>
@@ -47,7 +51,7 @@ export const StoriesCard: FC<{
       <div className={styles.content}>
         <Typography.Header
           className={styles.header}
-          as="h4"
+          as="h3"
           type="card-header-s"
         >
           {name}

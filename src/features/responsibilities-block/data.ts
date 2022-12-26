@@ -27,7 +27,11 @@ export const responsibilities: Responsibility[] = [
     image: {
       alt: "",
       srcSet: {
-        desktop: { ...RobotDesktopImage, width: 448, height: 264 },
+        desktop: {
+          ...RobotDesktopImage,
+          width: RobotDesktopImage.width / 4,
+          height: RobotDesktopImage.height / 4,
+        },
         mobile: RobotMobileImage,
       },
     },

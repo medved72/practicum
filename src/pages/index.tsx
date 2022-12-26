@@ -19,6 +19,7 @@ import {
 } from "@shared/api";
 import { useRouter } from "next/router";
 import { ResponseToJob } from "@widgets/response-to-job";
+import Head from "next/head";
 
 interface PageProps {
   vacancies: VacancyBlockProps["vacancies"];
@@ -31,6 +32,13 @@ const Page: FC<PageProps> = ({ vacancies }) => {
 
   return (
     <>
+      <Head>
+        <title>Я.Практикум</title>
+        <meta
+          name="description"
+          content="Станьте наставником или ревьюером яндекс практикума"
+        />
+      </Head>
       <ContentBlock>
         <Header />
         <InvitationBlock />
