@@ -7,10 +7,13 @@ export const Text: FC<{
   className?: string;
   children?: ReactNode;
   size?: "l" | "s" | "supportive" | "supportive-s";
-}> = ({ children, className, size = "l" }) => {
+  as?: "span" | "p" | "div";
+}> = ({ children, className, size = "l", as = "p" }) => {
+  const TagName = as;
+
   return (
-    <div className={cn([className, styles.text, styles[`text-${size}`]])}>
+    <TagName className={cn([className, styles.text, styles[`text-${size}`]])}>
       {children}
-    </div>
+    </TagName>
   );
 };
